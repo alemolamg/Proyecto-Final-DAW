@@ -1,0 +1,662 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -486,
+    "scrollLeft": -162,
+    "zoomLevel": 0.9,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "Tienda",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "producto",
+        "comment": "Tabla con los productos disponibles",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4a569ff0-154b-4fd3-be02-cd1eb494988f"
+          },
+          {
+            "name": "nombre",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "cc9a0b3b-0104-4e0f-8fae-b6b795c17a14"
+          },
+          {
+            "name": "imagen",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "9625b82e-d8ab-46e8-a002-b08ee7458a64"
+          },
+          {
+            "name": "stock",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "573bbb08-f44e-4ee6-b96f-4b9ee6509869"
+          },
+          {
+            "name": "precio",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2ccbeb35-f35a-451e-afb9-a7b44ac0adfe"
+          },
+          {
+            "name": "descripcion",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 67.75537109375,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "567d4d95-5c3d-4b60-b5f0-e4bdd0a618a7"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 198.2249,
+          "top": 638.2249,
+          "zIndex": 165,
+          "widthName": 60,
+          "widthComment": 120,
+          "color": "#396406"
+        },
+        "visible": true,
+        "id": "5a1dee64-5e30-47aa-98d9-04047c24f4f2"
+      },
+      {
+        "name": "consola",
+        "comment": "Propiedades de un producto consola",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8be54529-b890-4827-9515-0bef198fbe77"
+          },
+          {
+            "name": "codPro",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3d8baf82-d645-4ccf-a80a-d6b6b5010958"
+          },
+          {
+            "name": "modelo",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "cab87879-716e-4409-85a4-410dd92ecb5f"
+          },
+          {
+            "name": "espacio",
+            "comment": "Capacidad en GB",
+            "dataType": "TINYINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 104.62255859375,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d4a3282f-2aaa-4b35-9b93-c81ee246b066"
+          },
+          {
+            "name": "color",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "803183c8-5fac-443b-85a0-d57182f1c66e"
+          },
+          {
+            "name": "lector",
+            "comment": "Lector físico de los juegos (BR,tarjetas,...)",
+            "dataType": "BOOLEAN",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 120,
+              "widthDataType": 64.8544921875,
+              "widthDefault": 60
+            },
+            "id": "0c385e69-0f50-4b53-aac2-1f5ee60452d6"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 848,
+          "top": 714,
+          "zIndex": 177,
+          "widthName": 60,
+          "widthComment": 120
+        },
+        "visible": true,
+        "id": "b387d26d-00de-4b5f-ae5b-1bfa97da2123"
+      },
+      {
+        "name": "juego",
+        "comment": "producto juego con sus datos caractarísticos",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "320b891c-2368-4c20-98e1-912df382a483"
+          },
+          {
+            "name": "PEGI",
+            "comment": "Mínimo de edad para poder jugar",
+            "dataType": "TINYINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5afb0e09-6ccb-49f1-829a-8e475511bba5"
+          },
+          {
+            "name": "codPro",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c059907d-0f71-491f-af8e-a7e30415496a"
+          },
+          {
+            "name": "horas",
+            "comment": "Horas de juego",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 90.1689453125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "884491a5-34ea-40b7-839b-ec4092a70bb5"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 773,
+          "top": 503,
+          "zIndex": 166,
+          "widthName": 60,
+          "widthComment": 120
+        },
+        "visible": true,
+        "id": "0da16c8c-efaf-473a-b8ba-169a03e5e8ed"
+      },
+      {
+        "name": "periferico",
+        "comment": "Complemento de una consola o juego",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "Clave primaria del complemento",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b1e7fd9b-363e-4e5c-8800-a8f29f72e0c1"
+          },
+          {
+            "name": "codPro",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "aac1c1ca-4292-4bdd-83be-73e152d5485a"
+          },
+          {
+            "name": "idConsola",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "1a651fb7-c5d1-4924-ab61-fe9a54b7bb36"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 852.1111,
+          "top": 1032.5554,
+          "zIndex": 184,
+          "widthName": 60,
+          "widthComment": 120,
+          "color": "#101324"
+        },
+        "visible": true,
+        "id": "961307dc-b31c-4885-a5e5-d2affcad5c4c"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneOnly",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "5a1dee64-5e30-47aa-98d9-04047c24f4f2",
+          "columnIds": [
+            "4a569ff0-154b-4fd3-be02-cd1eb494988f"
+          ],
+          "x": 557.5808570312499,
+          "y": 734.2249,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "b387d26d-00de-4b5f-ae5b-1bfa97da2123",
+          "columnIds": [
+            "3d8baf82-d645-4ccf-a80a-d6b6b5010958"
+          ],
+          "x": 848,
+          "y": 810,
+          "direction": "left"
+        },
+        "constraintName": "fk_producto_to_consola",
+        "visible": true,
+        "id": "90a63a79-4a6f-4692-9328-5961ee04a0f5"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneOnly",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "5a1dee64-5e30-47aa-98d9-04047c24f4f2",
+          "columnIds": [
+            "4a569ff0-154b-4fd3-be02-cd1eb494988f"
+          ],
+          "x": 557.5808570312499,
+          "y": 670.2249,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "0da16c8c-efaf-473a-b8ba-169a03e5e8ed",
+          "columnIds": [
+            "c059907d-0f71-491f-af8e-a7e30415496a"
+          ],
+          "x": 773,
+          "y": 578.5,
+          "direction": "left"
+        },
+        "constraintName": "fk_producto_to_juego",
+        "visible": true,
+        "id": "66b90598-f0d0-4123-874a-1483a5f86e7b"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneOnly",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "5a1dee64-5e30-47aa-98d9-04047c24f4f2",
+          "columnIds": [
+            "4a569ff0-154b-4fd3-be02-cd1eb494988f"
+          ],
+          "x": 557.5808570312499,
+          "y": 798.2249,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "961307dc-b31c-4885-a5e5-d2affcad5c4c",
+          "columnIds": [
+            "aac1c1ca-4292-4bdd-83be-73e152d5485a"
+          ],
+          "x": 852.1111,
+          "y": 1097.8054,
+          "direction": "left"
+        },
+        "constraintName": "fk_producto_to_periferico",
+        "visible": true,
+        "id": "0af8cda9-34c0-45b2-b753-f6181261fe82"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "b387d26d-00de-4b5f-ae5b-1bfa97da2123",
+          "columnIds": [
+            "8be54529-b890-4827-9515-0bef198fbe77"
+          ],
+          "x": 1053.92724609375,
+          "y": 906,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "961307dc-b31c-4885-a5e5-d2affcad5c4c",
+          "columnIds": [
+            "1a651fb7-c5d1-4924-ab61-fe9a54b7bb36"
+          ],
+          "x": 1055.6111,
+          "y": 1032.5554,
+          "direction": "top"
+        },
+        "constraintName": "fk_consola_to_periferico",
+        "visible": true,
+        "id": "fe509e40-392e-4def-9815-7f29bf73cf99"
+      }
+    ]
+  }
+}
