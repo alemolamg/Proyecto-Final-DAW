@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -285,
-    "scrollLeft": -199,
-    "zoomLevel": 0.8,
+    "scrollTop": -491,
+    "scrollLeft": -86,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -189,7 +189,7 @@
           "active": false,
           "left": 713.4223,
           "top": 441.0416,
-          "zIndex": 22,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 120,
           "color": "#396406"
@@ -344,7 +344,7 @@
           "active": false,
           "left": 689.9245,
           "top": 68.3141,
-          "zIndex": 27,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 120
         },
@@ -475,7 +475,7 @@
           "active": false,
           "left": 1206.25,
           "top": 51.4933,
-          "zIndex": 3,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 120
         },
@@ -560,7 +560,7 @@
           "active": false,
           "left": 42.7332,
           "top": 128.1321,
-          "zIndex": 19,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 120,
           "color": "#101324"
@@ -669,7 +669,7 @@
           "active": false,
           "left": 738.1937,
           "top": 952.8011,
-          "zIndex": 37,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 120
         },
@@ -800,7 +800,7 @@
           "active": false,
           "left": 1372.294,
           "top": 458.35,
-          "zIndex": 45,
+          "zIndex": 10,
           "widthName": 86.55078125,
           "widthComment": 120
         },
@@ -885,7 +885,7 @@
           "active": false,
           "left": 1361.1479,
           "top": 814.5683,
-          "zIndex": 44,
+          "zIndex": 9,
           "widthName": 60,
           "widthComment": 120
         },
@@ -947,7 +947,7 @@
           "active": false,
           "left": 144.3905,
           "top": 711.6335,
-          "zIndex": 16,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 120
         },
@@ -1032,7 +1032,7 @@
           "active": false,
           "left": 148.6,
           "top": 469.25,
-          "zIndex": 39,
+          "zIndex": 8,
           "widthName": 93.06982421875,
           "widthComment": 120
         },
@@ -1117,12 +1117,89 @@
           "active": false,
           "left": 143.4,
           "top": 962.65,
-          "zIndex": 17,
+          "zIndex": 3,
           "widthName": 81.50439453125,
           "widthComment": 60
         },
         "visible": true,
         "id": "02cc3ad3-4432-45d0-8d89-512c13af9fb7"
+      },
+      {
+        "name": "reparacion",
+        "comment": "",
+        "columns": [
+          {
+            "name": "idRep",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "58f15aae-099f-4340-a7ad-7b4a9553abc4"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "db590550-2289-45f7-ac73-48ee6e99715f"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 855.2221,
+          "top": 1284.778,
+          "zIndex": 20,
+          "widthName": 63.42626953125,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "fdef9aff-3c48-434f-9729-50e93019a501"
+      },
+      {
+        "name": "productoRep",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 119.3329,
+          "top": 1283.2218,
+          "zIndex": 26,
+          "widthName": 76.43896484375,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "9abded09-6e5a-4e8d-b629-15cf449dff5e"
       }
     ],
     "indexes": []
