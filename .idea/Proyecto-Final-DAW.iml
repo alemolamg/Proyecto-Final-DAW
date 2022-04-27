@@ -117,6 +117,16 @@
       <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/nette/utils" />
       <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/dasprid/enum" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/jaybizzle/crawler-detect" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/jenssegers/agent" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/pragmarx/google2fa" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/bacon/bacon-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/mobiledetect/mobiledetectlib" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/laravel/jetstream" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/laravel/fortify" />
+      <excludeFolder url="file://$MODULE_DIR$/levelWare-Shop/vendor/livewire/livewire" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -111,6 +111,16 @@
       <path value="$PROJECT_DIR$/levelWare-Shop/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/levelWare-Shop/vendor/nette/utils" />
       <path value="$PROJECT_DIR$/levelWare-Shop/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/laravel/jetstream" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/laravel/fortify" />
+      <path value="$PROJECT_DIR$/levelWare-Shop/vendor/livewire/livewire" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
