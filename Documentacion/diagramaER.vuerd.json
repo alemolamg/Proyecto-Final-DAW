@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -591,
-    "scrollLeft": -538,
+    "scrollTop": -837,
+    "scrollLeft": -213,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -930,7 +930,7 @@
           "active": false,
           "left": 143.4,
           "top": 962.65,
-          "zIndex": 5,
+          "zIndex": 54,
           "widthName": 81.50439453125,
           "widthComment": 60
         },
@@ -944,7 +944,7 @@
           {
             "name": "idReparacion",
             "comment": "",
-            "dataType": "",
+            "dataType": "BIGINT",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1035,7 +1035,7 @@
           },
           {
             "name": "Estado",
-            "comment": "",
+            "comment": "Estado de la reparación",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -1050,18 +1050,64 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 120,
               "widthDataType": 60,
               "widthDefault": 60
             },
             "id": "89d27310-16fb-4f85-a480-faf7bbb5d3b4"
+          },
+          {
+            "name": "fechaEntrada",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 79.33349609375,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "74f56662-9558-45d9-91bf-23ec9756447d"
+          },
+          {
+            "name": "fechaSalida",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 69.93896484375,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4003b80c-86f4-4b6f-885d-bd24d02470e5"
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 777.0827,
-          "top": 1251.3065,
-          "zIndex": 10,
+          "top": 1250.1954,
+          "zIndex": 76,
           "widthName": 63.42626953125,
           "widthComment": 60
         },
@@ -1169,7 +1215,7 @@
           "active": false,
           "left": 185.7301,
           "top": 1241.2692,
-          "zIndex": 9,
+          "zIndex": 55,
           "widthName": 76.43896484375,
           "widthComment": 120
         },
@@ -1228,7 +1274,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 1275.7784,
           "top": 1066.5561,
           "zIndex": 53,
@@ -1420,8 +1466,8 @@
           "columnIds": [
             "bf71d4be-cae2-4c20-9731-143f45eab1d7"
           ],
-          "x": 995.91717265625,
-          "y": 1251.3065,
+          "x": 996.282162890625,
+          "y": 1250.1954,
           "direction": "top"
         },
         "constraintName": "fk_cliente_to_reparacion",
@@ -1473,7 +1519,7 @@
             "8dc2f900-a1df-4d79-9480-ec777b0c9366"
           ],
           "x": 777.0827,
-          "y": 1337.0565,
+          "y": 1356.4454,
           "direction": "left"
         },
         "constraintName": "fk_productorep_to_reparacion",
