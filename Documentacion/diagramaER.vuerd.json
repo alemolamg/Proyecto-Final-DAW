@@ -361,13 +361,36 @@
               "widthDefault": 60
             },
             "id": "89b91bdc-cc6b-46a4-9125-cee48d72fe8c"
+          },
+          {
+            "name": "idRol",
+            "comment": "número del rol",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 85.09716796875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "cac6e7ac-a3ab-4915-bbae-c4c18176eb52"
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 715.9078,
           "top": 889.6899,
-          "zIndex": 23,
+          "zIndex": 51,
           "widthName": 60,
           "widthComment": 120
         },
@@ -1152,6 +1175,68 @@
         },
         "visible": true,
         "id": "9abded09-6e5a-4e8d-b629-15cf449dff5e"
+      },
+      {
+        "name": "rol",
+        "comment": "posible tabla de rol",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "número del rol",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 85.09716796875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e8dcadcd-37f4-420b-b90b-9c5cd8c3df9f"
+          },
+          {
+            "name": "descripcion",
+            "comment": "nombres de los roles",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 67.75537109375,
+              "widthComment": 120,
+              "widthDataType": 64.60693359375,
+              "widthDefault": 60
+            },
+            "id": "b7d8f0ca-46bd-4dd8-8e15-374762c21e3c"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 1275.7784,
+          "top": 1066.5561,
+          "zIndex": 53,
+          "widthName": 60,
+          "widthComment": 111.12890625
+        },
+        "visible": true,
+        "id": "7446cbf6-2317-416e-80ff-c751563080b2"
       }
     ],
     "indexes": []
@@ -1275,7 +1360,7 @@
             "ce7680f7-243e-47d7-a874-edc3f7d8a32b"
           ],
           "x": 1133.8228390625,
-          "y": 985.6899,
+          "y": 942.8149,
           "direction": "right"
         },
         "end": {
@@ -1301,7 +1386,7 @@
             "ce7680f7-243e-47d7-a874-edc3f7d8a32b"
           ],
           "x": 715.9078,
-          "y": 937.6899,
+          "y": 942.8149,
           "direction": "left"
         },
         "end": {
@@ -1327,7 +1412,7 @@
             "ce7680f7-243e-47d7-a874-edc3f7d8a32b"
           ],
           "x": 924.86531953125,
-          "y": 1081.6898999999999,
+          "y": 1102.1898999999999,
           "direction": "bottom"
         },
         "end": {
@@ -1353,7 +1438,7 @@
             "ce7680f7-243e-47d7-a874-edc3f7d8a32b"
           ],
           "x": 715.9078,
-          "y": 1033.6898999999999,
+          "y": 1049.0648999999999,
           "direction": "left"
         },
         "end": {
@@ -1420,6 +1505,32 @@
         "constraintName": "fk_cesta_to_productocesta",
         "visible": true,
         "id": "d278fb10-e81c-4fb8-8d62-70609011b581"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "7446cbf6-2317-416e-80ff-c751563080b2",
+          "columnIds": [
+            "e8dcadcd-37f4-420b-b90b-9c5cd8c3df9f"
+          ],
+          "x": 1275.7784,
+          "y": 1121.5561,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "3db6bda8-78cc-423a-adb7-4f50feaad5a9",
+          "columnIds": [
+            "cac6e7ac-a3ab-4915-bbae-c4c18176eb52"
+          ],
+          "x": 1133.8228390625,
+          "y": 1049.0648999999999,
+          "direction": "right"
+        },
+        "constraintName": "fk_rol_to_usuario",
+        "visible": true,
+        "id": "152e3509-62ed-475e-a366-6511a72b47c4"
       }
     ]
   }
