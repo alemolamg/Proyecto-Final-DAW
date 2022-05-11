@@ -13,14 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('productoRep', function (Blueprint $table) {
+        Schema::create('reparaciones', function (Blueprint $table) {
             $table->id();
-            $table->text('descripcion');
+            $table->text('descripcion')->nullable();
+            $table->integer('estado');
+            $table->date('fechaEntrada');
+            $table->date('fechaSalida')->nullable();
             $table->unsignedBigInteger('idUser');
             $table->foreign('idUser')->references('id')->on('users');
-            $table->string('rutaImgs');
+            $table->unsignedBigInteger('codProducto');
+            $table->foreign('codProducto')->references('id')->on('productoRep');
             $table->timestamps();
-            $table->softDeletes();
+            //$table->softDeletes();
         });
     }
 
@@ -31,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productoRep');
+        Schema::dropIfExists('reparaciones');
     }
 };
