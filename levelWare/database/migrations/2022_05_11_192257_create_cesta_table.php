@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('cesta', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('idUser');
+            $table->foreign('idUser')->references('id')->on('users');
+            $table->unsignedBigInteger('idPro');
+            $table->foreign('idPro')->references('id')->on('producto');
+            $table->integer('cantidad');
             $table->timestamps();
         });
     }
