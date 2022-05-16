@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    // Cambio la tabla de referencia a producto
+    protected $table = "producto";
 }
