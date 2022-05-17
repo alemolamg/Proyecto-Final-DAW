@@ -6,17 +6,19 @@ use Illuminate\View\Component;
 
 class ProductCard extends Component
 {
-    public $titulo;
+    //public $titulo;
     public $btnText;
+    public $imagen;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($titulo = "Producto Estandar")
+    public function __construct()
     {
-        $this->titulo = $titulo;
+        //$this->titulo = $titulo;
+        //$this->imagen = $imagen;
     }
 
     /**

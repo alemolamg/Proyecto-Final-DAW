@@ -5,16 +5,14 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="py-0">
+        <div class="max-w mx-auto sm:px-0 lg:px-0">
 
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="bg-white overflow-hidden ">
                 <!-- <x-jet-welcome/> -->
 
                 <div class="p-3">
 
-                    <x-ProductListComponent>
-                    </x-ProductListComponent>
                     <x-ProductListComponent>
                     </x-ProductListComponent>
 
