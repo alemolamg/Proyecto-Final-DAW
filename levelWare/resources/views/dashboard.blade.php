@@ -11,10 +11,13 @@
             <div class="bg-white overflow-hidden ">
                 <!-- <x-jet-welcome/> -->
 
-                <div class="p-3">
+                <div class="p-3 bg-purple-600">
 
                     <x-ProductListComponent>
                     </x-ProductListComponent>
+
+                    <x-ProductMaxStockList>
+                    </x-ProductMaxStockList>
 
 
                 </div>
