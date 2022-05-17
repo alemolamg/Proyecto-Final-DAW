@@ -6,8 +6,5 @@
             {{$slot}}
         </p>
     </div>
-    <div class="grid px-6 pt-4 pb-2 justify-center">
-        <!--<a href="{route("$enlace")}"> -->
-        </a>
-    </div>
+
 </div>
