@@ -1,5 +1,5 @@
 <?php
-$productos = \App\Models\Product::where("stock",">",0)->orderBy('stock','desc')->get();
+$productos = \App\Models\Product::where("stock", ">", 0)->orderBy('stock', 'desc')->get();
 ?>
 
 <div class="rounded-lg overflow-hidden md:mx-2 my-2 bg-blue-300 shadow-md">  <!-- bg-{$color}-200"> -->
@@ -7,7 +7,7 @@ $productos = \App\Models\Product::where("stock",">",0)->orderBy('stock','desc')-
     <div id="boxCartas" class="grid grid-cols-2 md:grid-cols-5 justify-center pt-1">
 
         @foreach($productos as $pro)
-            <x-productCard>
+            <x-productCard id="{{$pro->id}}">
                 <x-slot name="imagen">{{$pro->imagen}}</x-slot>
                 <x-slot name="titulo">{{$pro->nombre}}</x-slot>
                 {{$pro->descripcion}}
