@@ -19,6 +19,8 @@
                     <x-ProductMaxStockList>
                     </x-ProductMaxStockList>
 
+                    <x-ProductsJuegos></x-ProductsJuegos>
+
 
                 </div>
 
