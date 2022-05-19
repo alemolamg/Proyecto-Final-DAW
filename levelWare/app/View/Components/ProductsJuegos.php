@@ -4,22 +4,16 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class ProductCard extends Component
+class ProductsJuegos extends Component
 {
-    //public $titulo;
-    public $id;
-    public $imagen;
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($id)
+    public function __construct()
     {
-        $this->id = $id;
-        //$this->titulo = $titulo;
-        //$this->imagen = $imagen;
+        //
     }
 
     /**
@@ -29,6 +23,6 @@ class ProductCard extends Component
      */
     public function render()
     {
-        return view('components.product-card');
+        return view('components.products-juegos');
     }
 }

@@ -49,6 +49,7 @@ class productController extends Controller
     {
         $pro = Product::find($id);
         return $pro;    //Ejemplo de carga de producto
+        return view('product.show')->with('pro', $pro);
         //
     }
 
