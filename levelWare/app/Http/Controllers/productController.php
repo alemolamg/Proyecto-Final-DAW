@@ -48,7 +48,7 @@ class productController extends Controller
     public function show($id)
     {
         $pro = Product::find($id);
-        return $pro;    //Ejemplo de carga de producto
+        //return $pro;    //Ejemplo de carga de producto
         return view('product.show')->with('pro', $pro);
         //
     }
