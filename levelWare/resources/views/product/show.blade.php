@@ -26,10 +26,10 @@
                             <br>
                             <h2 class="mx-1 font-bold">Categoría: </h2>
                             @if ($pro->tipoPro == 1)
-                                <!-- 1 = consola -->
+                                <!-- tipoPro 1 = consola -->
                                 <p class="mx-2 px-1 max-w-md ">Consola</p>
                             @elseif ($pro->tipoPro == 2)
-                                <!-- 2 = juego -->
+                                <!-- tipoPro 2 = juego -->
                                 <p class="mx-2 px-1 max-w-md ">Juego</p>
                             @else
                                 <!-- cualquier otro producto -->

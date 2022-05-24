@@ -25,7 +25,7 @@ class productController extends Controller
      */
     public function create()
     {
-        //
+        return view("product.create");
     }
 
     /**
@@ -47,8 +47,8 @@ class productController extends Controller
      */
     public function show($id)
     {
+        // Busco el producto a través del id recibido
         $pro = Product::find($id);
-        //return $pro;    //Ejemplo de carga de producto
         return view('product.show')->with('pro', $pro);
         //
     }
