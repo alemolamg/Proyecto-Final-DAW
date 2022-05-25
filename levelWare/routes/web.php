@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\consolaController;
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('dashboard')->name('dashboard');
 });
 
 Route::middleware([
@@ -28,4 +29,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::resource('producto', productController::class);
+Route::resource('producto', productController::class);  //Controlador Producto
+
+Route::resource('consola', consolaController::class);   //Controlador Consola
