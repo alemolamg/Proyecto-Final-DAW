@@ -16,7 +16,6 @@ class productController extends Controller
     {
         $ps = Product::all();
         return view("product.index")->with('productos', $ps);
-        //
     }
 
     /**
@@ -51,7 +50,6 @@ class productController extends Controller
         // Busco el producto a través del id recibido
         $pro = Product::find($id);
         return view('product.show')->with('pro', $pro);
-        //
     }
 
     /**
