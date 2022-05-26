@@ -13,6 +13,7 @@ $productos = \App\Models\Product::where('stock', '>', 0)
             <x-productCard id="{{ $pro->id }}">
                 <x-slot name="imagen">{{ $pro->imagen }}</x-slot>
                 <x-slot name="titulo">{{ $pro->nombre }}</x-slot>
+                <x-slot name="precio">{{ $pro->precio }}</x-slot>
                 {{ $pro->descripcion }}
             </x-productCard>
         @endforeach
