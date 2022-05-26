@@ -4,9 +4,8 @@ $productos = \App\Models\Product::where('tipoPro', 2)
     ->get();
 ?>
 
-<div class="rounded-lg overflow-hidden md:mx-2 my-2 bg-yellow-400 shadow-md">
-    <!-- bg-{$color}-200"> -->
-    <h2 class="mx-2 mt-1 text-2xl px-2">Juegos a la venta</h2>
+<div class="rounded-lg overflow-hidden md:mx-2 my-4">
+    <h2 class="mx-3 mt-1 text-white font-bold uppercase text-2xl px-2">Juegos a la venta </h2>
     <div id="boxCartas" class="grid grid-cols-2 md:grid-cols-5 justify-center pt-1">
 
         @foreach ($productos as $pro)
