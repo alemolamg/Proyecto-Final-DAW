@@ -9,6 +9,7 @@ class ProductCard extends Component
     //public $titulo;
     public $id;
     public $imagen;
+    public $precio;
 
     /**
      * Create a new component instance.
@@ -18,6 +19,7 @@ class ProductCard extends Component
     public function __construct($id)
     {
         $this->id = $id;
+        //$this->precio = $precio;
         //$this->titulo = $titulo;
         //$this->imagen = $imagen;
     }
