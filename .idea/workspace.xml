@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="979d4939-622c-4dc0-929a-9fe3f93ef77e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-Final-DAW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto-Final-DAW.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/app/Http/Controllers/productController.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/app/Http/Controllers/productController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/navigation-menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/product/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/product/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +200,9 @@
       <workItem from="1652939902339" duration="5000" />
       <workItem from="1653322042052" duration="3010000" />
       <workItem from="1653403798686" duration="1665000" />
+      <workItem from="1653495657175" duration="598000" />
+      <workItem from="1653829435163" duration="5000" />
+      <workItem from="1653860436396" duration="307000" />
     </task>
     <servers />
   </component>
