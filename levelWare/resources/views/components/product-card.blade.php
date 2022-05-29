@@ -2,7 +2,7 @@
     href="{{ route('producto.show', $id) }}">
     <!-- bg-{$color}-200"> -->
     <img class="w-full" src="{{ $imagen }}" alt="Imagen del producto">
-    <div class="px-6 py-4">
+    <div class="px-6 py-4 text-black">
         <h2 class="font-bold text-xl mb-2">{{ $titulo }}</h2>
         <p class="text-gray-700 font-bold text-base">
             {{ $precio }}€
