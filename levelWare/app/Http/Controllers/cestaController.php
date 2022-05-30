@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cesta;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class cestaController extends Controller
@@ -34,7 +36,7 @@ class cestaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //return redirect()->route('listaUsers');
     }
 
     /**
@@ -79,6 +81,12 @@ class cestaController extends Controller
      */
     public function destroy($id)
     {
+        //
+    }
+
+    public function aniadirCestaSesion(Request $request)
+    {
+
         //
     }
 }
