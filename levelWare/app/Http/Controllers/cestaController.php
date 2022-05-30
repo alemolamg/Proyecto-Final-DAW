@@ -87,6 +87,7 @@ class cestaController extends Controller
     public function aniadirCestaSesion(Request $request)
     {
 
+        $_SESSION['CESTA'];
         //
     }
 }
