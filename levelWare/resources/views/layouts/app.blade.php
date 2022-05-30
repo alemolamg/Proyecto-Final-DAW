@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (empty($_SESSION['CESTA'])) {
+    $_SESSION['CESTA'] = [];
+}
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 

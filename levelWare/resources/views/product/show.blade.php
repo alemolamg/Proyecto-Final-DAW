@@ -42,7 +42,7 @@
                         <br>
 
                         <div id="aniadirACesta" class=" max-w-md rounded-lg overflow-hidden md:mx-2 my-2  bg-blue-200">
-                            <form>
+                            <form action="{{ route('aniadirCestaSesion') }}" method="POST">
                                 <input
                                     class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                                     id="numTickets" type="number" placeholder="Cant. Entradas" name="numTickets"

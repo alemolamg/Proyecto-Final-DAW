@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cestaController;
 use App\Http\Controllers\consolaController;
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
@@ -16,10 +17,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard')->name('dashboard');
-});
+    return view('dashboard');
+})->name('dashboard');
 
-Route::middleware([
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+/*Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
@@ -27,8 +32,9 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-});
-
+}); */
 Route::resource('producto', productController::class);  //Controlador Producto
 
 Route::resource('consola', consolaController::class);   //Controlador Consola
+
+Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');

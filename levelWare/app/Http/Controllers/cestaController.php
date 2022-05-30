@@ -86,8 +86,10 @@ class cestaController extends Controller
 
     public function aniadirCestaSesion(Request $request)
     {
-
-        $_SESSION['CESTA'];
-        //
+        $arrayPro = array('id' => $request('proId'));
+        $_SESSION['CESTA'][] = $arrayPro;
+        //return $_SESSION['CESTA'];
+        //return redirect()->route('cesta.index');
+        return view('cesta.index');
     }
 }
