@@ -15,7 +15,7 @@ class cestaController extends Controller
      */
     public function index()
     {
-        //
+        return "hola soy el index";
     }
 
     /**
@@ -31,7 +31,7 @@ class cestaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -42,7 +42,7 @@ class cestaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -53,7 +53,7 @@ class cestaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -64,8 +64,8 @@ class cestaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -76,7 +76,7 @@ class cestaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -86,10 +86,11 @@ class cestaController extends Controller
 
     public function aniadirCestaSesion(Request $request)
     {
-        $arrayPro = array('id' => $request('proId'));
+        //return "Hola mundo";
+        $arrayPro = array('id' => $request->input('proId'), 'cant' => $request->input('cant'));
         $_SESSION['CESTA'][] = $arrayPro;
-        //return $_SESSION['CESTA'];
+        return $_SESSION['CESTA'];
         //return redirect()->route('cesta.index');
-        return view('cesta.index');
+        //return view('cesta.index');
     }
 }

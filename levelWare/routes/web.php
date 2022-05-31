@@ -37,4 +37,4 @@ Route::resource('producto', productController::class);  //Controlador Producto
 
 Route::resource('consola', consolaController::class);   //Controlador Consola
 
-Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
+Route::post('/aniadirCestaSesion/', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
