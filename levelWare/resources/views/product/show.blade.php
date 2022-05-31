@@ -52,7 +52,6 @@
                                 <input type="submit" value="Comprar"
                                     class="bg-indigo-600 hover:bg-green-300 hover:text-black text-white font-bold py-2 px-4 rounded">
                             </form>
-
                         </div>
 
                         <br>
