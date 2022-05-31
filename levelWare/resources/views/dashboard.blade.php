@@ -7,7 +7,6 @@
 
     <div class="py-0">
         <div class="max-w mx-auto sm:px-0 lg:px-0">
-
             <div class="bg-white overflow-hidden ">
                 <!-- <x-jet-welcome/> -->
 
