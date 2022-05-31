@@ -9,6 +9,7 @@ if (empty($_SESSION['CESTA'])) {
 
 
 use App\Models\Cesta;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class cestaController extends Controller
