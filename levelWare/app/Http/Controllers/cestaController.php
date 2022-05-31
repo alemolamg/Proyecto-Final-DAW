@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+//session_start();
+if (empty($_SESSION['CESTA'])) {
+    $_SESSION['CESTA'] = array();
+}
+
+
 use App\Models\Cesta;
-use App\Models\Product;
 use Illuminate\Http\Request;
 
 class cestaController extends Controller
@@ -15,7 +20,9 @@ class cestaController extends Controller
      */
     public function index()
     {
-        return "hola soy el index";
+        //$proCesta = $_SESSION('CESTA');
+        //return view('cesta.index')->with('proCesta', $proCesta);
+        return view('cesta.index');
     }
 
     /**
@@ -86,11 +93,11 @@ class cestaController extends Controller
 
     public function aniadirCestaSesion(Request $request)
     {
-        //return "Hola mundo";
-        $arrayPro = array('id' => $request->input('proId'), 'cant' => $request->input('cant'));
-        $_SESSION['CESTA'][] = $arrayPro;
-        return $_SESSION['CESTA'];
-        //return redirect()->route('cesta.index');
-        //return view('cesta.index');
+        $arrayPro = array('idPro' => $request->input('proId'), 'cant' => $request->input('cant'));
+        //session(['CESTA' => $arrayPro]);
+        session()->push('CESTA', $arrayPro);
+        //return $request->session()->has('CESTA');
+        //return session()->get('CESTA');
+        return redirect()->route('cesta.index');
     }
 }
