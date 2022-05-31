@@ -43,10 +43,11 @@
 
                         <div id="aniadirACesta" class=" max-w-md rounded-lg overflow-hidden md:mx-2 my-2  bg-blue-200">
                             <form action="{{ route('aniadirCestaSesion') }}" method="POST">
+                                @csrf
                                 <input
                                     class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                    id="numTickets" type="number" placeholder="Cant. Entradas" name="numTickets"
-                                    value="1" required />
+                                    id="cant" type="number" placeholder="Cant. Entradas" name="cant" value="1"
+                                    required />
                                 <input type="hidden" value="{{ $pro->id }}" name="proId" id="proId">
                                 <input type="submit" value="Comprar"
                                     class="bg-indigo-600 hover:bg-green-300 hover:text-black text-white font-bold py-2 px-4 rounded">

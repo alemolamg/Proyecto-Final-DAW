@@ -11,7 +11,7 @@
             <div class="bg-white overflow-hidden ">
                 <!-- <x-jet-welcome/> -->
 
-                <div class="p-3 bg-green-600">
+                <div class="p-3 bg-green-700">
 
                     <x-ProductListComponent>
                     </x-ProductListComponent>
