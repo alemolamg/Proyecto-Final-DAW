@@ -1,17 +1,15 @@
 <x-app-layout>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+    <div class="py-0">
+        <div class="max-w mx-auto sm:px-0 lg:px-0">
+            <div class="bg-white overflow-hidden ">
 
-                    <h1 class="text-center font-bold text-2xl">LISTA DE CONSOLAS</h1>
+                <div class="p-3 bg-green-700">
 
-                    HOLA MUNDO SOY LA CESTA
-                    @if (session('error') == 1)
-                        <br>ERROR EN LA DB;
-                    @endif
+                    <x-CartList>
+                    </x-CartList>
+
                 </div>
+
             </div>
         </div>
-    </div>
 </x-app-layout>
