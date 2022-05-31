@@ -36,5 +36,6 @@ Route::get('/dashboard', function () {
 Route::resource('producto', productController::class);  //Controlador Producto
 
 Route::resource('consola', consolaController::class);   //Controlador Consola
+Route::resource('cesta', cestaController::class);       //Controlador Cesta
 
 Route::post('/aniadirCestaSesion/', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
