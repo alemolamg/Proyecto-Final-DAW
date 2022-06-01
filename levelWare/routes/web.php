@@ -16,15 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-})->name('/');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
-/*Route::middleware([
+Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
@@ -32,10 +24,14 @@ Route::get('/dashboard', function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-}); */
-Route::resource('producto', productController::class);  //Controlador Producto
+    Route::get('/', function () {
+        return view('dashboard');
+    })->name('/');
+});
 
+// Controladores añadidos
+Route::resource('producto', productController::class);  //Controlador Producto
 Route::resource('consola', consolaController::class);   //Controlador Consola
 Route::resource('cesta', cestaController::class);       //Controlador Cesta
 
-Route::post('/aniadirCestaSesion/', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
+Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');

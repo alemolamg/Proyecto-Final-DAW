@@ -2,12 +2,6 @@
 
 namespace App\Http\Controllers;
 
-//session_start();
-if (empty($_SESSION['CESTA'])) {
-    $_SESSION['CESTA'] = array();
-}
-
-
 use App\Models\Cesta;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -21,8 +15,6 @@ class cestaController extends Controller
      */
     public function index()
     {
-        //$proCesta = $_SESSION('CESTA');
-        //return view('cesta.index')->with('proCesta', $proCesta);
         return view('cesta.index');
     }
 
@@ -94,11 +86,37 @@ class cestaController extends Controller
 
     public function aniadirCestaSesion(Request $request)
     {
-        $arrayPro = array('idPro' => $request->input('proId'), 'cant' => $request->input('cant'));
-        //session(['CESTA' => $arrayPro]);
-        session()->push('CESTA', $arrayPro);
+        $claveCesta = $this->comprobarRepetidoCesta($request->input('proId'), $request->input('cant'));
+        if ($claveCesta == -1) {    //Verificamos si la función da falso
+            $arrayPro = array('idPro' => $request->input('proId'), 'cant' => $request->input('cant'));
+            session()->push('CESTA', $arrayPro);
+        } else {
+            //$claveCesta = $this->comprobarRepetidoCesta($request->input('proId'), $request->input('cant'));
+            //return session()->get('CESTA')[$claveCesta]['cant'];
+        }
+        //return "entro en la función nueva";
+
         //return $request->session()->has('CESTA');
-        //return session()->get('CESTA');
+        //return session()->get('CESTA')[$claveCesta]['cant'];
         return redirect()->route('cesta.index');
+    }
+
+    private function comprobarRepetidoCesta($idPro, $cantidad)
+    {
+        $claveCesta = -1;
+        if (session()->get('CESTA') != null) {
+            $cestaTemp = session()->get('CESTA');   //COPIAMOS LA CESTA
+            session()->forget('CESTA');       // Eliminamos la cesta de la sesión
+            foreach ($cestaTemp as $key => $proCesta) {
+                if ($idPro == $proCesta['idPro']) {
+                    $claveCesta = $key;
+                    $cantidad = $cantidad + $proCesta['cant'];
+                    $proCesta['cant'] = $cantidad;
+                }
+                session()->push('CESTA', $proCesta);    //Añadimos a la sesión los elementos de la cesta.
+            }
+        }
+        return $claveCesta;
+
     }
 }
