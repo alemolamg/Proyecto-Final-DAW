@@ -1,7 +1,6 @@
 <?php
 $productos = \App\Models\Product::where('stock', '>', 0)
-    ->orderBy('stock', 'desc')
-    ->get();
+    ->orderBy('stock', 'desc')->take(5)->get();
 ?>
 
 <div class="rounded-lg overflow-hidden md:mx-2 my-4">

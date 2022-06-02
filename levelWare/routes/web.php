@@ -29,6 +29,12 @@ Route::middleware([
     })->name('/');
 });
 
+
+Route::get('/admin', function () {
+    return view('administration.adminPage');
+})->middleware('auth', 'verified')->name('admin');
+//})->middleware('auth', 'verified', 'admin')->name('admin');
+
 // Controladores añadidos
 Route::resource('producto', productController::class);  //Controlador Producto
 Route::resource('consola', consolaController::class);   //Controlador Consola

@@ -9,9 +9,9 @@
             <div class="p-0 bg-green-600 border-b border-gray-200">
                 <div id="container" class="grid md:grid-flow-col">
 
-                    <div id="imgPro" class="aling-center align-content-center md:justify-start m-0 p-0">
-                        <img class="md:w-full rounded-lg h-auto p-0" src="{{ asset($pro->imagen) }}"
-                            alt="{{ $pro->imagen }}">
+                    <div id="imgPro" class="aling-center bg-red-600 align-content-center md:justify-start m-0 p-0">
+                        <img class="justify-content-center align-items-center w-auto max-w-md md:w-full rounded-lg h-auto p-0"
+                            src="{{ asset($pro->imagen) }}" alt="{{ $pro->imagen }}">
                     </div>
                     <div id="datosPro" class=" p-3">
                         <!-- grid md:grid-flow-col "> -->
@@ -41,11 +41,12 @@
                         <p class="mx-2 px-1 text-justify  ">{{ $pro->precio }}€</p>
                         <br>
 
-                        <div id="aniadirACesta" class=" max-w-md rounded-lg overflow-hidden md:mx-2 my-2  bg-blue-200">
+                        <div id="aniadirACesta"
+                            class="grid grid-col-3 max-w-md rounded-lg overflow-hidden md:mx-2 my-2 ">
                             <form action="{{ route('aniadirCestaSesion') }}" method="POST">
                                 @csrf
                                 <input
-                                    class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                    class="max-w-md w-60 px-3 py-2 mr-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                                     id="cant" type="number" placeholder="Cant. Entradas" name="cant" value="1"
                                     required />
                                 <input type="hidden" value="{{ $pro->id }}" name="proId" id="proId">

@@ -12,11 +12,14 @@
                         {{'La cesta está vacía'}}
                     @else
                         <!-- Muestra los elementos de la cesta ordenados por lista -->
-                        <x-CartList> </x-CartList>
+                        <x-CartList></x-CartList>
                     @endif
 
                 </div>
-
+                <a href="#">
+                    <input type="submit" value="Comprar todo"
+                           class="bg-indigo-600 hover:bg-green-300 hover:text-black text-white font-bold py-2 px-4 rounded">
+                </a>
             </div>
         </div>
 </x-app-layout>

@@ -1,3 +1,3 @@
 <x-app-layout>
-    sexy
+    VACIO
 </x-app-layout>
