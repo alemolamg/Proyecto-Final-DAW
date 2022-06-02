@@ -8,9 +8,7 @@
     <div class="py-0">
         <div class="max-w mx-auto sm:px-0 lg:px-0">
             <div class="bg-white overflow-hidden ">
-
                 <div class="p-3 bg-green-700">
-
                     <div id="boxCartas" class="grid md:grid-cols-3 justify-center pt-3">
 
                         <!-- Carta de control de Productos -->
@@ -22,7 +20,7 @@
                                 </p>
                             </div>
                             <div class="grid px-6 pt-4 pb-2 justify-center">
-                                <a href="#">
+                                <a href="{{route('producto.create')}}">
                                     <button type="button"
                                             class="inline-block bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white px-3 py-1 text-sm font-semibold text-blue-400 mr-2 mb-2">
                                         Añadir producto
