@@ -16,28 +16,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-    Route::get('/', function () {
-        return view('dashboard');
-    })->name('/');
+    Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
+
 });
 
+/**
+ * Rutas estándares
+ * Son rutas que tienen la información necesaria para
+ */
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
+Route::get('/', function () {
+    return view('dashboard');
+})->name('/');
+
+// Vista solo para administradores.
 Route::get('/admin', function () {
     return view('administration.adminPage');
 })->middleware('auth', 'verified')->name('admin');
-//})->middleware('auth', 'verified', 'admin')->name('admin');
+
 
 // Controladores añadidos
 Route::resource('producto', productController::class);  //Controlador Producto
 Route::resource('consola', consolaController::class);   //Controlador Consola
 Route::resource('cesta', cestaController::class);       //Controlador Cesta
 
-Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
