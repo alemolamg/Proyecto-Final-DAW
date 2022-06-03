@@ -37,14 +37,13 @@
                                                 required
                                             />
                                         </div>
-                                        <div class="mb-4 md:mr-2 md:mb-0">
+                                        <div class="mb-4 md:mr-2 md:mb-0 text-black font-black">
                                             <label class="block mb-2 text-sm font-bold text-gray-700" for="rol">
                                                 Tipo de producto
                                             </label>
                                             <select class="form-select form-select-lg mb-3
                                       appearance-none
                                       text-black
-                                      bg-blue-800
                                       block
                                       w-full
                                       px-7
@@ -60,7 +59,7 @@
                                       shadow
                                       ease-in-out
                                       m-0
-                                      focus:text-gray-700 focus:bg-red-300 focus:border-blue-600 focus:shadow-outline"
+                                      focus:text-gray-700 focus:bg-white focus:border-white focus:shadow-outline"
                                                     name="rol" id="rol">
                                                 <option value="1">Consola</option>
                                                 <option value="2">Juego</option>
@@ -97,15 +96,17 @@
                                         </div>
                                         <div class="md:ml-2">
                                             <label class="block mb-2 text-sm font-bold text-gray-700"
-                                                   for="localidad">
-                                                Localidad
+                                                   for="almacenamiento">
+                                                Almacenamiento
                                             </label>
                                             <input
                                                 class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="localidad"
-                                                type="text"
+                                                id="almacenamiento"
+                                                type="number"
                                                 placeholder="Localidad del Festival"
-                                                name="localidad"
+                                                name="almacenamiento"
+                                                min="0"
+                                                value="0"
                                             />
                                         </div>
                                     </div>
@@ -126,38 +127,24 @@
                                     </div>
                                     <div class="mb-4 md:flex md:justify-between">
                                         <div class="mb-4 md:mr-2 md:mb-0">
-                                            <label class="block mb-2 text-sm font-bold text-gray-700" for="precio">
-                                                Precio entrada
+                                            <label class="block mb-2 text-sm font-bold text-gray-700" for="stock">
+                                                Stock
                                             </label>
                                             <input
                                                 class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="precio"
+                                                id="stock"
                                                 type="number"
-                                                placeholder="Precio entrada"
-                                                name="precio"
+                                                placeholder="stock producto"
+                                                name="stock"
                                             />
                                         </div>
-                                        <div class="mb-4 md:mr-2 md:mb-0">
-                                            <label class="block mb-2 text-sm font-bold text-gray-700" for="fecha">
-                                                Fecha comienzo festival
-                                            </label>
-                                            <input
-                                                class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                id="fecha"
-                                                type="date"
-                                                placeholder="Fecha Comienzo"
-                                                name="fecha"
-                                                min="2022-01-01"
-                                                max="2022-12-31"
-                                            />
 
-                                        </div>
                                     </div>
 
                                     <div class="mb-6 text-center">
                                         <input type="submit"
-                                               class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-md hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                                               value="Añadir festival"
+                                               class="w-full px-4 py-2 font-bold text-black bg-indigo-300 rounded-md hover:bg-emerald-300 focus:outline-none focus:shadow-outline"
+                                               value="Añadir Producto"
                                         >
                                     </div>
                                     <hr class="mb-6 border-t"/>
