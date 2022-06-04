@@ -1,10 +1,12 @@
 <?php
-$productos = \App\Models\Product::all()->take(10);
+$productos = \App\Models\Product::all()
+    ->where('stock', '>', 0)
+    ->take(30);
 ?>
 
 <div class="rounded-lg overflow-hidden md:mx-2 my-4">
     <h2 class="mx-3 mt-1 text-white font-bold uppercase text-2xl px-2">Lista productos </h2>
-    <div id="boxCartas" class="grid grid-cols-2 lg:grid-cols-7 md:grid-cols-5 justify-center pt-1">
+    <div id="boxCartas" class="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-5 justify-center pt-1">
 
         @foreach ($productos as $pro)
             <x-productCard id="{{ $pro->id }}">
