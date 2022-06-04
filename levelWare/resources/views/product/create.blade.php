@@ -18,7 +18,7 @@
                             </div>
                             <!-- Col -->
                             <div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-                                <h3 class="pt-4 text-2xl text-center text-black">Añadir Festival</h3>
+                                <h3 class="pt-4 text-2xl text-center text-black">Añadir Producto</h3>
                                 <form method="POST" action="{{route('producto.store')}}"
                                       class="px-8 pt-6 pb-8 mb-4 bg-white rounded"
                                       enctype="multipart/form-data">
@@ -38,7 +38,7 @@
                                             />
                                         </div>
                                         <div class="mb-4 md:mr-2 md:mb-0 text-black font-black">
-                                            <label class="block mb-2 text-sm font-bold text-gray-700" for="rol">
+                                            <label class="block mb-2 text-sm font-bold text-gray-700" for="tipoPro">
                                                 Tipo de producto
                                             </label>
                                             <select class="form-select form-select-lg mb-3
@@ -60,7 +60,7 @@
                                       ease-in-out
                                       m-0
                                       focus:text-gray-700 focus:bg-white focus:border-white focus:shadow-outline"
-                                                    name="rol" id="rol">
+                                                    name="tipoPro" id="tipoPro">
                                                 <option value="1">Consola</option>
                                                 <option value="2">Juego</option>
                                                 <option value="3">Periférico</option>

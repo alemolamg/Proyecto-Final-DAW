@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class productController extends Controller
 {
+
+    const RUTA_IMAGEN = 'storage/productsPhotos/';
+    const IMAGEN_ESTANDAR = 'standar.jpg';
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +31,10 @@ class productController extends Controller
      */
     public function create()
     {
-        return view("product.create");
+        if (Auth::user()) { //Verificamos que el usuario haya iniciado sesión
+            return view("product.create");
+        }
+        return redirect("login");
     }
 
     /**
@@ -36,7 +45,38 @@ class productController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'tipoPro' => 'required',
+            'descrip' => 'required',
+            'precio' => 'required',
+            'stock' => 'required',
+        ]);
+        try {
+            $newPro = new Product(); // Creamos un objeto Festival.
+
+            $newPro->nombre = $request->input('nombre');
+            $newPro->descripcion = $request->input('descrip');
+            $newPro->precio = $request->input('precio');
+            $newPro->stock = $request->input('stock');
+            $newPro->tipoPro = $request->input('tipoPro');
+            $newPro->almacenamiento = $request->input('almacenamiento');
+            //$newPro->user_id = Auth::id();
+
+            if (is_uploaded_file($request->file('foto'))) {
+                $nombreFoto = time() . "-" . $request->file('foto')->getClientOriginalName();
+                $newPro->imagen = self::RUTA_IMAGEN . $nombreFoto;
+            } else {
+                $nombreFoto = self::RUTA_IMAGEN . self::IMAGEN_ESTANDAR;
+            }
+            $newPro->save();    //Guardamos en la base de datos.
+
+            $request->file('foto')->storeAs('public/productsPhotos', $nombreFoto);
+            return redirect()->route('dashboard');
+        } catch (QueryException $exception) {
+            //echo $exception;
+            return redirect()->route('admin')->with('error', 1);
+        }
     }
 
     /**
