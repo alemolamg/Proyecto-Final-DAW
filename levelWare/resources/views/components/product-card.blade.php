@@ -5,7 +5,7 @@
     <div class="px-6 py-4 text-black">
         <h2 class="font-bold text-xl mb-2">{{ $titulo }}</h2>
         <p class="text-gray-700 font-bold text-base">
-            {{ $precio }}€
+            Precio: {{ $precio }}€
         </p>
     </div>
 </a>
