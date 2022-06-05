@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="border-b border-grey-800" style="background: #272727">
+<nav x-data="{ open: false }" class="border-b border-grey-800 position-fixed" style="background: #181818">
     <!-- Primary Navigation Menu -->
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div class="flex justify-between h-16">
@@ -12,7 +12,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('/') }}" :active="request()->routeIs('/')">
                         {{ __('Menú principal') }}
                     </x-jet-nav-link>
                 </div>
