@@ -4,8 +4,19 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-green-700 border-b border-gray-200">
-                    <h1>LISTA DE FESTIVALES</h1>
-                    <!--TODO: Cambiar propiedades del H1 para que se vea correctamente -->
+                    <div class="grid grid-cols-2">
+                        <h1 class="text-2xl uppercase">LISTA DE Productos</h1>
+                        <div>
+                            <a href="{{route('producto.create')}}">
+                                <button type="button"
+                                        class="inline-block bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white px-3 py-1 text-sm font-semibold text-blue-400 mr-2 mb-2">
+                                    Añadir producto nuevo
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
                     <!-- component -->
                     <table class="min-w-full table-auto border-collapse block md:table">
                         <thead class="block md:table-header-group">
