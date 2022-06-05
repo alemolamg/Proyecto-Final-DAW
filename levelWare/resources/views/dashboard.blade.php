@@ -7,21 +7,21 @@
 
     <div class="py-0">
         <div class="max-w mx-auto sm:px-0 lg:px-0">
-            <div class="bg-white overflow-hidden ">
+            <!-- <div class="bg-white overflow-hidden "> -->
 
-                <div class="p-3 bg-green-700">
+            <div class="p-3 bg-green-700">
 
-                    <x-ProductListComponent>
-                    </x-ProductListComponent>
+                <x-ProductListComponent>
+                </x-ProductListComponent>
 
-                    <x-ProductMaxStockList>
-                    </x-ProductMaxStockList>
+                <x-ProductMaxStockList>
+                </x-ProductMaxStockList>
 
-                    <x-ProductsJuegos></x-ProductsJuegos>
+                <x-ProductsJuegos></x-ProductsJuegos>
 
-
-                </div>
 
             </div>
+
         </div>
+    </div>
 </x-app-layout>

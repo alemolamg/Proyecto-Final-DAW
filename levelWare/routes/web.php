@@ -49,3 +49,6 @@ Route::resource('producto', productController::class);  //Controlador Producto
 Route::resource('consola', consolaController::class);   //Controlador Consola
 Route::resource('cesta', cestaController::class);       //Controlador Cesta
 
+
+// Controles Administrador
+Route::get('/listaPro', [productController::class, 'listarProductos'])->middleware('auth', 'verified')->name('listaPro');

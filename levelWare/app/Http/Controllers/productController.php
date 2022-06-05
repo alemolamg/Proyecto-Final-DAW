@@ -123,6 +123,15 @@ class productController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pro = Product::findOrFail($id);
+        $pro->delete();
+        return redirect()->route('listaPro');
+    }
+
+    public function listarProductos()
+    {
+        $productos = Product::withTrashed()->get(); // SoftDeletes propertie.
+        //$productos = Product::all();
+        return view('product.listaProductos')->with('productos', $productos);
     }
 }
