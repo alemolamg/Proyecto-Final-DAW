@@ -24,12 +24,12 @@
 <body class="font-sans antialiased text-white levelware" style="background: #272727">
     <x-jet-banner />
 
-    <div class="min-h-screen bg-gray-100 ">
+    <div class="min-h-screen">
         @livewire('navigation-menu')
 
         <!-- Page Heading -->
         @if (isset($header))
-            <header class="bg-green-400 shadow">
+            <header class="levelware shadow text-white" style="background: #272727">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     {{ $header }}
                 </div>
