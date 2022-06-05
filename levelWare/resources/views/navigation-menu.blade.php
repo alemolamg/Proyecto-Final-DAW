@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-green-800 border-b border-green-900">
+<nav x-data="{ open: false }" class="border-b border-grey-800" style="background: #272727">
     <!-- Primary Navigation Menu -->
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div class="flex justify-between h-16">
@@ -33,11 +33,10 @@
                         <div class="ml-3 relative">
                             <x-jet-dropdown align="right" width="48">
                                 <x-slot name="trigger">
-                                    <span class="inline-flex rounded-md">
+                                    <span class="inline-flex rounded">
                                         <button type="button"
-                                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-green-700 hover:bg-indigo-600 hover:text-gray-200 focus:outline-none transition">
                                             Administración
-
                                             <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20" fill="currentColor">
                                                 <path fill-rule="evenodd"
@@ -47,7 +46,6 @@
                                         </button>
                                     </span>
                                 </x-slot>
-
 
                                 <x-slot name="content">
                                     <!-- Account Management -->
@@ -179,7 +177,7 @@
                 <div class="text-black">
                     <a href="{{ route('cesta.index') }}">
                         <button id="carrito cesta"
-                            class="transition bg-indigo-300 hover:bg-green-300 hover:text-black text-black font-bold duration-300 py-2 px-4 rounded">
+                            class="transition bg-green-600 hover:bg-indigo-500 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded">
                             <i class=" fa fa-shopping-cart" aria-hidden="true"></i>
                         </button>
                     </a>

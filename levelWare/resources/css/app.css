@@ -1,3 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.levelware {
+    background-color: #272727 ;
+    color: white;
+    background: #272727;
+}

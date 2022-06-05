@@ -1,10 +1,4 @@
-<?php
-session_start();
-if (empty($_SESSION['CESTA'])) {
-    $_SESSION['CESTA'] = [];
-}
-?>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -18,41 +12,39 @@ if (empty($_SESSION['CESTA'])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <script src="https://kit.fontawesome.com/f877b491f4.js" crossorigin="anonymous"></script>
-
-    @livewireStyles
 
     <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/f877b491f4.js" crossorigin="anonymous"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased text-white">
-<x-jet-banner/>
+<body class="font-sans antialiased text-white levelware" style="background: #272727">
+    <x-jet-banner />
 
-<div class="min-h-screen bg-gray-100">
-    @livewire('navigation-menu')
+    <div class="min-h-screen bg-gray-100 ">
+        @livewire('navigation-menu')
 
-    <!-- Page Heading -->
-    @if (isset($header))
-        <header class="bg-green-400 shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
-            </div>
-        </header>
-    @endif
+        <!-- Page Heading -->
+        @if (isset($header))
+            <header class="bg-green-400 shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
+        @endif
 
-    <!-- Page Content -->
-    <main class="">
-        {{ $slot }}
-    </main>
-</div>
+        <!-- Page Content -->
+        <main class="">
+            {{ $slot }}
+        </main>
+    </div>
 
-@stack('modals')
+    @stack('modals')
 
-@livewireScripts
+    @livewireScripts
 </body>
 
 </html>
