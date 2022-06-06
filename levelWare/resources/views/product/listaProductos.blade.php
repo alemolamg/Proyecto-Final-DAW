@@ -1,13 +1,13 @@
 <x-app-layout>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-4 border-b border-gray-200">
                 <div class="grid grid-cols-2">
                     <h1 class="text-2xl uppercase">Lista De Productos</h1>
 
-                    <div id="nuevoPro" class="pb-2">
-                        <a href="{{ route('producto.create') }}">
+                    <div id="nuevoPro" class="pb-2 align-content-end justify-end">
+                        <a href="{{ route('producto.create') }}"
+                            class="align-content-end justify-end justify-content-end">
                             <button type="button" id="nuevoPro"
                                 class="transition bg-green-600 hover:bg-indigo-500 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded">
                                 Añadir producto nuevo
@@ -36,7 +36,11 @@
                             </th>
                             <th
                                 class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
-                                Fecha
+                                Precio
+                            </th>
+                            <th
+                                class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+                                Stock
                             </th>
                             <th
                                 class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
@@ -53,9 +57,18 @@
                                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                     {{ $pro->nombre }}</td>
                                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                    {{ $pro->tipoPro }}</td>
+                                    @if ($pro->tipoPro == 1)
+                                        Consola
+                                    @elseif($pro->tipoPro == 2)
+                                        Juego
+                                    @else
+                                        Periférico
+                                    @endif
+                                </td>
                                 <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                     {{ $pro->precio }}</td>
+                                <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                                    {{ $pro->stock }}</td>
                                 <td
                                     class="p-2 md:border md:border-grey-500 text-left block md:table-cell content-start align-content: space-between;">
                                     <div class="grid grid-cols-3 ">

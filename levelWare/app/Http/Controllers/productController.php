@@ -100,7 +100,8 @@ class productController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pro = Product::findOrFail($id);
+        return view('product.edit')->with('producto', $pro);
     }
 
     /**
@@ -112,7 +113,36 @@ class productController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'tipoPro' => 'required',
+            'descrip' => 'required',
+            'precio' => 'required',
+            'stock' => 'required',
+        ]);
+        try {
+            $newPro = new Product(); // Creamos un objeto Festival.
+
+            $newPro->nombre = $request->input('nombre');
+            $newPro->descripcion = $request->input('descrip');
+            $newPro->precio = $request->input('precio');
+            $newPro->stock = $request->input('stock');
+            $newPro->tipoPro = $request->input('tipoPro');
+            $newPro->almacenamiento = $request->input('almacenamiento');
+            //$newPro->user_id = Auth::id();
+
+            if (is_uploaded_file($request->file('foto'))) {
+                $nombreFoto = time() . "-" . $request->file('foto')->getClientOriginalName();
+                $newPro->imagen = self::RUTA_IMAGEN . $nombreFoto;
+                $request->file('foto')->storeAs('public/productsPhotos', $nombreFoto);
+            }
+            $newPro->save();    //Guardamos en la base de datos.
+
+            return redirect()->route('listaPro');
+        } catch (QueryException $exception) {
+            //echo $exception;
+            return redirect()->route('listaPro')->with('error', 1);
+        }
     }
 
     /**

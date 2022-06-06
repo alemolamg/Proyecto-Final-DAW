@@ -4,7 +4,7 @@
         <div class="max-w mx-auto sm:px-0 lg:px-0">
 
             <div class="py-2 container mx-auto ">
-                <div class="flex justify-center px-6 my-12 pb-6 ">
+                <div class="flex justify-center px-6 my-12 pb-4 ">
 
                     <!-- Row -->
                     <div class="w-full xl:w-3/4 lg:w-11/12 flex">
@@ -80,7 +80,7 @@
                                     </div>
                                     <div class="md:ml-2">
                                         <label class="block mb-2 text-sm font-bold text-gray-700" for="almacenamiento">
-                                            Almacenamiento
+                                            Almacenamiento (GB)
                                         </label>
                                         <input
                                             class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
