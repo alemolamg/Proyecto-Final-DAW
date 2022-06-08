@@ -1,2 +1,2 @@
-<img src="storage/setaLevelWare.png" {{ $attributes }}>
+<img src="storage/setaLevelWare.png" class="w-16" {{ $attributes }}>
 

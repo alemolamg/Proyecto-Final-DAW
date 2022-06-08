@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="979d4939-622c-4dc0-929a-9fe3f93ef77e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/administration/adminPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/administration/adminPage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/diagramaER.vuerd.json" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/diagramaER.vuerd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/app/Http/Controllers/productController.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/app/Http/Controllers/productController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/product/listaProductos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/product/listaProductos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/vendor/jetstream/components/authentication-card-logo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/vendor/jetstream/components/authentication-card-logo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,29 +159,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Applications/MAMP/htdocs/Proyecto-Final-DAW/levelWare/storage/app/public/productsPhotos&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Applications/MAMP/htdocs/Proyecto-Final-DAW/levelWare/public/storage/productsPhotos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/levelWare/storage/app/public/productsPhotos" />
+      <recent name="$PROJECT_DIR$/levelWare/public/storage/productsPhotos" />
       <recent name="$PROJECT_DIR$/levelWare/resources/views/product" />
+      <recent name="$PROJECT_DIR$/levelWare/storage/app/public/productsPhotos" />
       <recent name="$PROJECT_DIR$/levelWare/resources/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/levelWare/storage/app/public/productsPhotos" />
       <recent name="$PROJECT_DIR$/levelWare/storage/app/public" />
     </key>
   </component>
@@ -209,7 +214,15 @@
       <workItem from="1653990740794" duration="8575000" />
       <workItem from="1654068895754" duration="7913000" />
       <workItem from="1654094159128" duration="6170000" />
-      <workItem from="1654188505138" duration="10915000" />
+      <workItem from="1654188505138" duration="10953000" />
+      <workItem from="1654238654126" duration="3473000" />
+      <workItem from="1654328614282" duration="3112000" />
+      <workItem from="1654340588775" duration="8219000" />
+      <workItem from="1654449006025" duration="2840000" />
+      <workItem from="1654546161497" duration="598000" />
+      <workItem from="1654683266031" duration="825000" />
+      <workItem from="1654684998944" duration="94000" />
+      <workItem from="1654685156707" duration="14919000" />
     </task>
     <servers />
   </component>
