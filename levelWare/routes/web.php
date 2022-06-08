@@ -39,9 +39,9 @@ Route::get('/', function () {
 })->name('/');
 
 // Vista solo para administradores.
-Route::get('/admin', function () {
+/*Route::get('/admin', function () {
     return view('administration.adminPage');
-})->middleware('auth', 'verified')->name('admin');
+})->middleware('auth', 'verified')->name('admin'); */
 
 
 // Controladores añadidos

@@ -65,17 +65,19 @@ class productController extends Controller
 
             if (is_uploaded_file($request->file('foto'))) {
                 $nombreFoto = time() . "-" . $request->file('foto')->getClientOriginalName();
-                $newPro->imagen = self::RUTA_IMAGEN . $nombreFoto;
+                //$newPro->imagen = self::RUTA_IMAGEN . $nombreFoto;
+                $request->file('foto')->storeAs('public/productsPhotos', $nombreFoto);
             } else {
-                $nombreFoto = self::RUTA_IMAGEN . self::IMAGEN_ESTANDAR;
+                $nombreFoto = self::IMAGEN_ESTANDAR;
             }
+            $newPro->imagen = self::RUTA_IMAGEN . $nombreFoto;
             $newPro->save();    //Guardamos en la base de datos.
 
-            $request->file('foto')->storeAs('public/productsPhotos', $nombreFoto);
-            return redirect()->route('dashboard');
+            //$request->file('foto')->storeAs('public/productsPhotos', $nombreFoto);
+            return redirect()->route('listaPro');
         } catch (QueryException $exception) {
             //echo $exception;
-            return redirect()->route('admin')->with('error', 1);
+            return redirect()->route('listaPro')->with('error', 1);
         }
     }
 
@@ -121,22 +123,21 @@ class productController extends Controller
             'stock' => 'required',
         ]);
         try {
-            $newPro = new Product(); // Creamos un objeto Festival.
+            $proEdit = Product::findOrFail($id); // Creamos un objeto Festival.
 
-            $newPro->nombre = $request->input('nombre');
-            $newPro->descripcion = $request->input('descrip');
-            $newPro->precio = $request->input('precio');
-            $newPro->stock = $request->input('stock');
-            $newPro->tipoPro = $request->input('tipoPro');
-            $newPro->almacenamiento = $request->input('almacenamiento');
-            //$newPro->user_id = Auth::id();
+            $proEdit->nombre = $request->input('nombre');
+            $proEdit->descripcion = $request->input('descrip');
+            $proEdit->precio = $request->input('precio');
+            $proEdit->stock = $request->input('stock');
+            $proEdit->tipoPro = $request->input('tipoPro');
+            $proEdit->almacenamiento = $request->input('almacenamiento');
 
             if (is_uploaded_file($request->file('foto'))) {
                 $nombreFoto = time() . "-" . $request->file('foto')->getClientOriginalName();
-                $newPro->imagen = self::RUTA_IMAGEN . $nombreFoto;
+                $proEdit->imagen = self::RUTA_IMAGEN . $nombreFoto;
                 $request->file('foto')->storeAs('public/productsPhotos', $nombreFoto);
             }
-            $newPro->save();    //Guardamos en la base de datos.
+            $proEdit->save();    //Guardamos en la base de datos.
 
             return redirect()->route('listaPro');
         } catch (QueryException $exception) {
