@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -17,11 +16,14 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('idUser');
             $table->foreign('idUser')->references('id')->on('users');
-            $table->unsignedBigInteger('idPro');
-            $table->foreign('idPro')->references('id')->on('producto');
-            $table->integer('cantidad');
+            $table->float('precioTotal')->nullable();
+            $table->date('fechaPedido');
+            $table->integer('estado');
             $table->timestamps();
+            $table->softDeletes();
         });
+
+        Schema::rename('cesta', 'pedido');
     }
 
     /**
@@ -32,5 +34,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('cesta');
+        Schema::dropIfExists('pedido');
     }
 };

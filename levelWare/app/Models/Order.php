@@ -10,4 +10,7 @@ class Order extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    // Cambio la tabla de referencia a producto
+    protected $table = "pedido";
 }
