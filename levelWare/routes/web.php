@@ -54,6 +54,8 @@ Route::resource('cesta', cestaController::class);       //Controlador Cesta
 // Controles Administrador
 Route::get('/listaPro', [productController::class, 'listarProductos'])->middleware('auth', 'verified')->name('listaPro');
 
+
+// Ejemplo de email.
 Route::get('prueba', function () {
     $correo = new PedidoMailable;
     Mail::to('alemol@hotmail.com')->send($correo);
