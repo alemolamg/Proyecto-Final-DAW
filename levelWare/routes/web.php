@@ -56,6 +56,6 @@ Route::get('/listaPro', [productController::class, 'listarProductos'])->middlewa
 
 Route::get('prueba', function () {
     $correo = new PedidoMailable;
-    Mail::to('molejandro@hotmail.com')->send($correo);
+    Mail::to('alemol@hotmail.com')->send($correo);
     return "Mensaje enviado";
 });
