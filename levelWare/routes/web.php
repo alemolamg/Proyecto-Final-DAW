@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\cestaController;
 use App\Http\Controllers\consolaController;
+use App\Http\Controllers\pedidoController;
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 use App\Mail\PedidoMailable;
@@ -49,6 +50,7 @@ Route::get('/', function () {
 Route::resource('producto', productController::class);  //Controlador Producto
 Route::resource('consola', consolaController::class);   //Controlador Consola
 Route::resource('cesta', cestaController::class);       //Controlador Cesta
+Route::resource('pedido', pedidoController::class);     //Controlador Pedido
 
 
 // Controles Administrador
