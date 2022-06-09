@@ -4,6 +4,8 @@ use App\Http\Controllers\cestaController;
 use App\Http\Controllers\consolaController;
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
+use App\Mail\PedidoMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +25,6 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
-
 });
 
 /**
@@ -52,3 +53,9 @@ Route::resource('cesta', cestaController::class);       //Controlador Cesta
 
 // Controles Administrador
 Route::get('/listaPro', [productController::class, 'listarProductos'])->middleware('auth', 'verified')->name('listaPro');
+
+Route::get('prueba', function () {
+    $correo = new PedidoMailable;
+    Mail::to('molejandro@hotmail.com')->send($correo);
+    return "Mensaje enviado";
+});
