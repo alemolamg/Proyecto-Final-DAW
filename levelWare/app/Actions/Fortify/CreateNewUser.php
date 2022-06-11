@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
+use App\Mail\PedidoMailable;
+use Illuminate\Support\Facades\Mail;
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -31,13 +33,17 @@ class CreateNewUser implements CreatesNewUsers
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
 
+        // Manda un correo electrónico al crear el usuario por registro
+        $correo = new PedidoMailable;
+        Mail::to($input['email'])->send($correo);
+
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
             'apellidos' => $input['apellidos'],
             'password' => Hash::make($input['password']),
             'rol' => 0,
-            'provinvia' => $input['provincia'],
+            'provincia' => $input['provincia'],
             'localidad' => $input['localidad'],
             'direccion' => $input['direccion']
         ]);
