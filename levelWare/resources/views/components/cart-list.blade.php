@@ -15,7 +15,7 @@ $arrayCesta = session()->get('CESTA');
         </thead>
         <tbody>
 
-            @foreach ($arrayCesta as $pc)
+            @foreach ($arrayCesta as $key => $pc)
                 <!-- Buscamos el producto para sacar los datos -->
                 <?php $proc = App\Models\Product::find($pc['idPro']); ?>
                 <tr class="border-solid border-2 border-white">
@@ -32,8 +32,10 @@ $arrayCesta = session()->get('CESTA');
                     <td>{{ $proc->precio }}</td>
                     <td>{{ $pc['cant'] }}</td>
                     <td>
-                        <btn>btn 1</btn>
-                        <btn>btn 2</btn>
+                        <input type="button" onclick="verCesta()" value="pulsame" class="cursor-pointer">
+                        <br>
+                        <div id="kk">{{ $key }}</div>
+
                     </td>
                 </tr>
             @endforeach
@@ -50,3 +52,13 @@ $arrayCesta = session()->get('CESTA');
         </form>
     </div>
 @endif
+
+<!-- Intento de script para actializar el estado de la tienda
+     <script>
+         function verCesta() {
+             var cesta = < %= Session["CESTA"] % > ;
+             document.getElementById('kk').value = cesta;
+
+         }
+     </script>
+-->
