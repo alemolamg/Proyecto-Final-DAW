@@ -41,9 +41,12 @@ $arrayCesta = session()->get('CESTA');
     </table>
 
 </div>
-<div class="p-2">
-    <a href="#">
-        <input type="submit" value="Comprar todo"
-            class="bg-indigo-600 hover:bg-green-300 hover:text-black text-white font-bold py-2 px-4 rounded">
-    </a>
-</div>
+@if (!empty($arrayCesta))
+    <div class="p-2">
+        <form method="POST" action="{{ route('pedido.store') }}">
+            @csrf
+            <input type="submit" value="Comprar todo"
+                class="bg-indigo-600 hover:bg-green-300 hover:text-black text-white font-bold py-2 px-4 rounded">
+        </form>
+    </div>
+@endif
