@@ -34,8 +34,8 @@ class CreateNewUser implements CreatesNewUsers
         ])->validate();
 
         // Manda un correo electrónico al crear el usuario por registro
-        $correo = new PedidoMailable;
-        Mail::to($input['email'])->send($correo);
+        // $correo = new PedidoMailable;
+        // Mail::to($input['email'])->send($correo);
 
         return User::create([
             'name' => $input['name'],
