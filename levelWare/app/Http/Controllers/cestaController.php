@@ -90,11 +90,7 @@ class cestaController extends Controller
         if ($claveCesta == -1) {    //Verificamos si la función da falso
             $arrayPro = array('idPro' => $request->input('proId'), 'cant' => $request->input('cant'));
             session()->push('CESTA', $arrayPro);
-        } else {
-            //$claveCesta = $this->comprobarRepetidoCesta($request->input('proId'), $request->input('cant'));
-            //return session()->get('CESTA')[$claveCesta]['cant'];
         }
-        //return "entro en la función nueva";
 
         //return $request->session()->has('CESTA');
         //return session()->get('CESTA')[$claveCesta]['cant'];
@@ -117,6 +113,5 @@ class cestaController extends Controller
             }
         }
         return $claveCesta;
-
     }
 }

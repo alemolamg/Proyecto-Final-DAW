@@ -32,9 +32,15 @@ $arrayCesta = session()->get('CESTA');
                     <td>{{ $proc->precio }}</td>
                     <td>{{ $pc['cant'] }}</td>
                     <td>
-                        <input type="button" onclick="verCesta()" value="pulsame" class="cursor-pointer">
-                        <br>
+                        <form action="#" style="display: block" id="formEliminar">
+                            <input type="button" onclick="verCesta()" value="Eliminar"
+                                class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">
+                        </form>
                         <div id="kk">{{ $key }}</div>
+                        <form action="#" style="display: block" id="formActualizar">
+                            <input type="button" onclick="verCesta()" value="Actualizark"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                        </form>
 
                     </td>
                 </tr>
@@ -53,6 +59,12 @@ $arrayCesta = session()->get('CESTA');
     </div>
 @endif
 
+
+<script type="text/javascript">
+    function cambiarBotones() {
+
+    }
+</script>
 <!-- Intento de script para actializar el estado de la tienda
      <script>
          function verCesta() {
