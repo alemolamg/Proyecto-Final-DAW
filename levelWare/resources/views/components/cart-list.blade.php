@@ -59,7 +59,8 @@ $precioTotal = 0;
             <p class="text-bold text-uppercase">Precio total: {{ $precioTotal }}€ </p>
         </div>
         <div>
-            <form action="#" id="vaciarCesta">
+            <form action="{{ route('vaciarCesta') }}" id="vaciarCesta" method="POST">
+                @csrf
                 <input type="submit" value="Vaciar Cesta"
                     class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">
             </form>

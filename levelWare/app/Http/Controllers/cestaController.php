@@ -127,6 +127,12 @@ class cestaController extends Controller
         return redirect()->route('cesta.index');
     }
 
+    public function vaciarCesta()
+    {
+        session()->forget('CESTA');
+        return redirect()->route('cesta.index');
+    }
+
     private function rehacerCesta($idCesta)
     {
         $cestaTemp = session()->get('CESTA');
