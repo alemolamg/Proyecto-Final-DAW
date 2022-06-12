@@ -46,6 +46,7 @@ class pedidoController extends Controller
             $idPedido = -1;
 
             try {
+                // Creación del pedido
                 $newOrder = new Order();
                 $newOrder->idUser = Auth::id();
                 $newOrder->fechaPedido = new DateTime();
@@ -54,14 +55,12 @@ class pedidoController extends Controller
 
                 // Guardamos el pedido nuevo
                 $newOrder->save();
-            } catch (QueryException $exception) {
-                return "ERROR al crear el pedido.";
-            }
 
-            try {
+                // Añadimos los produtos comprados
                 foreach ($cesta as $key => $pc) {
                     $newPro = new productoCesta();
                     $newPro->idPedido = $newOrder->id;
+                    $idPedido = $newOrder->id;
                     $newPro->idPro = $pc['idPro'];
                     $newPro->cantidad = $pc['cant'];
                     $newPro->save();
@@ -71,12 +70,10 @@ class pedidoController extends Controller
                 }
 
                 // Guardamos el nuevo precio total con todos los productos en el pedido
-                $newOrder = Product::findOrFail($newPro->idPedido);
-                $newOrder->precio = $precioTotal;
+                $newOrder->precioTotal = $precioTotal;
                 $newOrder->save();
             } catch (QueryException $exception) {
-                //echo $exception;
-                //return redirect()->route('listaPro')->with('error', 'Pedido no grabado correctamente');
+                return "ERROR al crear el pedido.";
             }
         } else {
             // La cesta está vacía
@@ -84,7 +81,7 @@ class pedidoController extends Controller
         }
 
         session()->forget('CESTA');
-        return "Hemos estado en el creado de la cesta";
+        return "Hemos estado en el creado de la cesta. El precio total sería: " . $precioTotal;
     }
 
     /**
