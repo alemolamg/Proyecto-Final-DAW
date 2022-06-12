@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Scripts -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script><!-- Creo que se prodría quitar -->
     <script src="https://kit.fontawesome.com/f877b491f4.js" crossorigin="anonymous"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="{{ mix('js/app.js') }}" defer></script>
