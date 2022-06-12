@@ -27,7 +27,7 @@ Route::middleware([
 ])->group(function () {
     Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
     Route::put('/eliminarProducto', [cestaController::class, 'eliminarDeCesta'])->name('eliminarProducto');
-    Route::post('/vaciarCesta', [cestaController::class, 'vaciarCesta'])->name('vaciarCesta');
+    Route::post('/vaciarCesta', [cestaController::class, 'vaciarCesta'])->name('vaciarCesta ');
 });
 
 /**
@@ -56,9 +56,14 @@ Route::resource('pedido', pedidoController::class);     //Controlador Pedido
 
 
 // Controles Administrador
-Route::get('/listaPro', [productController::class, 'listarProductos'])->middleware('auth', 'verified')->name('listaPro');
-
-
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+    'adminAccess'
+])->group(function () {
+    Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
+});
 // Ejemplo de email.
 Route::get('prueba', function () {
     $correo = new PedidoMailable;

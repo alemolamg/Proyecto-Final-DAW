@@ -19,7 +19,7 @@ class AdminAccess
     public function handle(Request $request, Closure $next)
     {
         if (Auth::user()->rol == 0)
-            return redirect('/');
+            return redirect('/')->with('error', "Dirección no válida.");
         return $next($request);
     }
 }
