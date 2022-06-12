@@ -5,18 +5,28 @@
             <div class="p-3 ">
 
                 <?php
-                $productosAll = \App\Models\Product::all()
+                $productosAll = App\Models\Product::all()
                     ->where('stock', '>', 0)
                     ->take(30);
+
+                $proMasStock = \App\Models\Product::where('stock', '>', 0)
+                    ->orderBy('stock', 'desc')
+                    ->take(6)
+                    ->get();
+
+                $juegos = \App\Models\Product::where('tipoPro', 2)
+                    ->orderBy('stock', 'desc')
+                    ->get();
                 ?>
 
                 <x-ProductListComponent :productos="$productosAll">
                 </x-ProductListComponent>
 
-                <x-ProductMaxStockList>
-                </x-ProductMaxStockList>
+                <x-ProductListComponent :productos="$proMasStock">
+                </x-ProductListComponent>
 
-                <x-ProductsJuegos></x-ProductsJuegos>
+                <x-ProductListComponent :productos="$juegos">
+                </x-ProductListComponent>
 
 
             </div>
