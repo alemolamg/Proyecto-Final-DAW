@@ -4,7 +4,13 @@
         <div class="max-w mx-auto sm:px-0 lg:px-0">
             <div class="p-3 ">
 
-                <x-ProductListComponent>
+                <?php
+                $productosAll = \App\Models\Product::all()
+                    ->where('stock', '>', 0)
+                    ->take(30);
+                ?>
+
+                <x-ProductListComponent :productos="$productosAll">
                 </x-ProductListComponent>
 
                 <x-ProductMaxStockList>

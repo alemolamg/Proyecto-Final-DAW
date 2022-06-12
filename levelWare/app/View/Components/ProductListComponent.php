@@ -2,18 +2,27 @@
 
 namespace App\View\Components;
 
+use App\Models\Product;
 use Illuminate\View\Component;
+use phpDocumentor\Reflection\Types\This;
 
 class ProductListComponent extends Component
 {
+
+    public $productos;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($productos = [])
     {
-        //
+        if (empty($productos)) {
+            $this->productos =  Product::all();
+        } else {
+            $this->productos = $productos;
+        }
     }
 
     /**
