@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="979d4939-622c-4dc0-929a-9fe3f93ef77e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/app/Http/Controllers/cestaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/app/Http/Controllers/cestaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/components/cart-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/components/cart-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +223,7 @@
       <workItem from="1654685156707" duration="15187000" />
       <workItem from="1654788481689" duration="10537000" />
       <workItem from="1655024493743" duration="1223000" />
+      <workItem from="1655048934960" duration="1405000" />
     </task>
     <servers />
   </component>
