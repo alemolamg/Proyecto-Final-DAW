@@ -28,9 +28,9 @@
                 </div>
 
                 <!-- Vista admin -->
-                @if (Auth::user()->rol != 0)
-                    <div class="hidden sm:flex sm:items-center sm:ml-6">
-                        @auth()
+                @auth()
+                    @if (Auth::user()->rol != 0)
+                        <div class="hidden sm:flex sm:items-center sm:ml-6">
                             <div class="ml-3 relative">
                                 <x-jet-dropdown align="right" width="48">
                                     <x-slot name="trigger">
@@ -67,9 +67,9 @@
                                     </x-slot>
                                 </x-jet-dropdown>
                             </div>
-                        @endauth
-                    </div>
-                @endif
+                        </div>
+                    @endif
+                @endauth
 
             </div>
 
