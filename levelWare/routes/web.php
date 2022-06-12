@@ -26,6 +26,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
+    Route::put('/eliminarProducto', [cestaController::class, 'eliminarDeCesta'])->name('eliminarProducto');
 });
 
 /**

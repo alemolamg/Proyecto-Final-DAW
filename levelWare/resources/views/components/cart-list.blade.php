@@ -38,18 +38,13 @@ $precioTotal = 0;
 
                     <!-- BTN para eliminar producto de la cesta -->
                     <td>
-                        <form action="#" style="display: block" id="formEliminar">
-                            <input type="button" onclick="verCesta()" value="Eliminar"
+                        <form action="{{ route('eliminarProducto') }}" method="POST" id="formEliminar">
+                            @csrf
+                            @method('PUT')
+                            <input type="submit" value="Eliminar"
                                 class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">
+                            <input type="hidden" id="idCesta" name="idCesta" value={{ $key }}>
                         </form>
-
-                        <div id="kk">{{ $key }}</div>
-
-                        <form action="#" style="display: none" id="formActualizar">
-                            <input type="button" onclick="verCesta()" value="Actualizar"
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
-                        </form>
-
                     </td>
                 </tr>
             @endforeach

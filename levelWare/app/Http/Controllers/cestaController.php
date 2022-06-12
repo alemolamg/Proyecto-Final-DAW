@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cesta;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Type\Integer;
 
 class cestaController extends Controller
 {
@@ -113,5 +114,23 @@ class cestaController extends Controller
             }
         }
         return $claveCesta;
+    }
+
+    /**
+     * Borra un producto de la cesta
+     * @param Request $request Parámetro que tendrá el id de la cesta a borrar.
+     * @return \Illuminate\Http\RedirectResponse Vuelve a la cesta.
+     */
+    public function eliminarDeCesta(Request $request)
+    {
+        self::rehacerCesta((int)$request->idCesta);
+        return redirect()->route('cesta.index');
+    }
+
+    private function rehacerCesta($idCesta)
+    {
+        $cestaTemp = session()->get('CESTA');
+        array_splice($cestaTemp, $idCesta, 1);
+        session()->put('CESTA', $cestaTemp);
     }
 }
