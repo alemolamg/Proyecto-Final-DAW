@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Productos') }}
+            {{ __('Products') }}
         </h2>
     </x-slot>
 
@@ -10,8 +10,8 @@
             <div class="bg-white overflow-hidden ">
 
                 <div class="p-3 bg-green-700">
-                    
-                    <x-ProductsJuegos></x-ProductsJuegos>
+
+                    <x-ProductListComponent></x-ProductListComponent>
 
 
                 </div>

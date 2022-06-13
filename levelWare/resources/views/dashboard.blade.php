@@ -11,7 +11,7 @@
                     ->take(30);
 
                 $proNuevos = \App\Models\Product::orderBy('created_at', 'desc')
-                    ->take(10)
+                    ->take(12)
                     ->get();
 
                 $proMasStock = \App\Models\Product::where('stock', '>', 0)
