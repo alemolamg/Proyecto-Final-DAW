@@ -159,6 +159,12 @@ class productController extends Controller
         return redirect()->route('listaPro');
     }
 
+    public function activar($id)
+    {
+        Product::withTrashed()->where('id', $id)->restore();
+        return redirect()->route('listaPro');
+    }
+
     public function listarProductos()
     {
         $productos = Product::withTrashed()->get(); // SoftDeletes propertie.

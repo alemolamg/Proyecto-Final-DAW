@@ -6,6 +6,7 @@ use App\Http\Controllers\pedidoController;
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 use App\Mail\PedidoMailable;
+use App\Models\Product;
 use Illuminate\Support\Facades\Mail;
 
 /*
@@ -63,6 +64,7 @@ Route::middleware([
     'adminAccess'
 ])->group(function () {
     Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
+    Route::get('/activarPro/{id}', [productController::class, 'activar'])->name('activarPro');
 });
 // Ejemplo de email.
 Route::get('prueba', function () {
