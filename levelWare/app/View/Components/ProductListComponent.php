@@ -8,7 +8,7 @@ use phpDocumentor\Reflection\Types\This;
 
 class ProductListComponent extends Component
 {
-
+    public $titulo;
     public $productos;
 
     /**
@@ -16,8 +16,9 @@ class ProductListComponent extends Component
      *
      * @return void
      */
-    public function __construct($productos = [])
+    public function __construct($titulo = "Lista de Productos", $productos = [])
     {
+        $this->titulo = $titulo;
         if (empty($productos)) {
             $this->productos =  Product::all();
         } else {
