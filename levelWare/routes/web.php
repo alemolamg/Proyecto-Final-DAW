@@ -28,7 +28,7 @@ Route::middleware([
 ])->group(function () {
     Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
     Route::put('/eliminarProducto', [cestaController::class, 'eliminarDeCesta'])->name('eliminarProducto');
-    Route::post('/vaciarCesta', [cestaController::class, 'vaciarCesta'])->name('vaciarCesta ');
+    Route::post('/vaciarCesta', [cestaController::class, 'vaciarCesta'])->name('vaciarCesta');
 });
 
 /**
