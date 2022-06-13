@@ -1,27 +1,26 @@
 <x-app-layout>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
 
-                    <h1 class="text-center font-bold text-2xl">LISTA DE CONSOLAS</h1>
+    <div class="py-0">
+        <div class="max-w mx-auto sm:px-0 lg:px-0">
+            <div class="p-3 ">
 
-                    <div id="boxCartas" class="grid md:grid-cols-3 justify-center pt-3">
+                <?php
+                // Lista de productos a pasar al componente.
 
-                        @foreach ($cons as $c)
-                            <x-productCard id="{{ $c->id }}">
-                                <x-slot name="imagen">{{ $c->imagen }}</x-slot>
-                                <x-slot name="titulo">{{ $c->nombre }}</x-slot>
-                                {{ $c->descripcion }}
-                            </x-productCard>
-                        @endforeach
-                    </div>
+                $consolas = \App\Models\Product::where('tipoPro', 1)
+                    ->orderBy('updated_at', 'desc')
+                    ->get();
 
-                    @if (session('error') == 1)
-                        <br>ERROR EN LA DB;
-                    @endif
-                </div>
+                $xbox = \App\Models\Product::where('nombre', 'LIKE', '%xbox%')
+                    ->where('descripcion', 'LIKE', '%xbox%')
+                    ->get();
+                ?>
+
+                <x-ProductListComponent titulo="Consolas" :productos="$consolas">
+                </x-ProductListComponent>
+
             </div>
+
         </div>
     </div>
 </x-app-layout>
