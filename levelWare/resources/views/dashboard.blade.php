@@ -7,8 +7,12 @@
                 <?php
                 // Lista de productos a pasar al componente.
                 $productosAll = App\Models\Product::all()
-                    ->where('stock', '>', 0)
+                    ->where('stock', '>', 5)
                     ->take(30);
+
+                $proNuevos = \App\Models\Product::orderBy('created_at', 'desc')
+                    ->take(10)
+                    ->get();
 
                 $proMasStock = \App\Models\Product::where('stock', '>', 0)
                     ->orderBy('stock', 'desc')
@@ -22,19 +26,24 @@
                 $peri = \App\Models\Product::where('tipoPro', 3)
                     ->take(10)
                     ->get();
+
+                $xbox = \App\Models\Product::where('nombre', 'LIKE', '%xbox%')
+                    ->where('descripcion', 'LIKE', '%xbox%')
+                    ->get();
                 ?>
 
                 <x-ProductListComponent :productos="$productosAll">
                 </x-ProductListComponent>
 
-                <x-ProductListComponent titulo="Productos con más Stock" :productos="$proMasStock">
-                </x-ProductListComponent>
-
                 <x-ProductListComponent titulo="Juegos" :productos="$juegos">
                 </x-ProductListComponent>
 
-                <x-ProductListComponent titulo="Periféricos" :productos="$peri">
+                <x-ProductListComponent titulo="Ultimos Productos añadidos" :productos="$proNuevos">
                 </x-ProductListComponent>
+
+                <x-ProductListComponent titulo="Productos con más Stock" :productos="$proMasStock">
+                </x-ProductListComponent>
+
 
             </div>
 

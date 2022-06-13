@@ -7,6 +7,7 @@ use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 use App\Mail\PedidoMailable;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 /*
@@ -69,6 +70,6 @@ Route::middleware([
 // Ejemplo de email.
 Route::get('prueba', function () {
     $correo = new PedidoMailable;
-    Mail::to('alemol@hotmail.com')->send($correo);
+    Mail::to(Auth::user()->email)->send($correo);
     return "Mensaje enviado";
 });
