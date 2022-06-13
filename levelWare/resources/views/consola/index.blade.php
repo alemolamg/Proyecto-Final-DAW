@@ -12,12 +12,21 @@
                     ->get();
 
                 $xbox = \App\Models\Product::where('descripcion', 'LIKE', '%xbox%')->get();
+
+                $nintendo = \App\Models\Product::where('descripcion', 'LIKE', '%nintendo%')->get();
+                $ps = \App\Models\Product::where('descripcion', 'LIKE', '%playstation%')->get();
                 ?>
 
                 <x-ProductListComponent titulo="Consolas" :productos="$consolas">
                 </x-ProductListComponent>
 
-                <x-ProductListComponent titulo="Consolas" :productos="$xbox">
+                <x-ProductListComponent titulo="Lo mejor de Xbox" :productos="$xbox">
+                </x-ProductListComponent>
+
+                <x-ProductListComponent titulo="Lo mejor de Playstation" :productos="$ps">
+                </x-ProductListComponent>
+
+                <x-ProductListComponent titulo="Lo mejor de Nintendo" :productos="$nintendo">
                 </x-ProductListComponent>
 
             </div>
