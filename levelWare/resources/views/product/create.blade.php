@@ -113,7 +113,7 @@
 
                                 <div class="mb-6 text-center">
                                     <input type="submit"
-                                        class="w-full px-4 py-2 font-bold text-black bg-indigo-300 rounded-md hover:bg-emerald-300 focus:outline-none focus:shadow-outline"
+                                        class="w-full transition bg-green-600 hover:bg-indigo-500 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded"
                                         value="Añadir Producto">
                                 </div>
                                 <hr class="mb-6 border-t" />
