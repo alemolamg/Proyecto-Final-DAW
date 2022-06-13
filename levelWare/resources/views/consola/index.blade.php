@@ -11,12 +11,13 @@
                     ->orderBy('updated_at', 'desc')
                     ->get();
 
-                $xbox = \App\Models\Product::where('nombre', 'LIKE', '%xbox%')
-                    ->where('descripcion', 'LIKE', '%xbox%')
-                    ->get();
+                $xbox = \App\Models\Product::where('descripcion', 'LIKE', '%xbox%')->get();
                 ?>
 
                 <x-ProductListComponent titulo="Consolas" :productos="$consolas">
+                </x-ProductListComponent>
+
+                <x-ProductListComponent titulo="Consolas" :productos="$xbox">
                 </x-ProductListComponent>
 
             </div>
