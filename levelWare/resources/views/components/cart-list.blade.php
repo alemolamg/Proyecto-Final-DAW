@@ -7,11 +7,11 @@ $precioTotal = 0;
     <table class="table-fixed">
         <thead>
             <tr>
-                <th>Imagen</th>
-                <th>Nombre Producto</th>
-                <th>precio</th>
-                <th>Cantidad</th>
-                <th>Botones</th>
+                <th>{{ __('cart.image') }}</th>
+                <th>{{ __('cart.name') }}</th>
+                <th>{{ __('cart.price') }}</th>
+                <th>{{ __('cart.quantity') }}</th>
+                <th>{{ __('cart.buttons') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -56,7 +56,7 @@ $precioTotal = 0;
     <div class="p-2 grid grid-cols-4 align-content-end">
         <div></div>
         <div id="divPrecio" class="text-bold text-uppercase">
-            <p class="text-bold text-uppercase">Precio total: {{ $precioTotal }}€ </p>
+            <p class="text-bold text-uppercase">{{ __('cart.totalPrice') }}: {{ $precioTotal }}€ </p>
         </div>
         <div>
             <form action="{{ route('vaciarCesta') }}" id="vaciarCesta" method="POST">
@@ -69,24 +69,8 @@ $precioTotal = 0;
             <form method="POST" action="{{ route('pedido.store') }}">
                 @csrf
                 <input type="submit" value="Comprar todo"
-                    class="bg-indigo-600 hover:bg-green-300 hover:text-black text-white font-bold py-2 px-4 rounded">
+                    class="transition bg-green-600 hover:bg-indigo-500 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded">
             </form>
         </div>
     </div>
 @endif
-
-
-<script type="text/javascript">
-    function cambiarBotones() {
-
-    }
-</script>
-<!-- Intento de script para actializar el estado de la tienda
-     <script>
-         function verCesta() {
-             var cesta = < %= Session["CESTA"] % > ;
-             document.getElementById('kk').value = cesta;
-
-         }
-     </script>
--->
