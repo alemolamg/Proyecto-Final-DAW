@@ -17,13 +17,13 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('producto.index') }}" :active="request()->routeIs('producto')">
-                        {{ __('Productos') }}
+                    <x-jet-nav-link href="{{ route('producto.index') }}" :active="request()->routeIs('producto.index')">
+                        {{ __('messages.games') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('consola.index') }}" :active="request()->routeIs('consola.index')">
-                        {{ __('Consolas') }}
+                        {{ __('messages.consoles') }}
                     </x-jet-nav-link>
                 </div>
 
