@@ -1,7 +1,7 @@
 <nav x-data="{ open: false }" class="border-b border-grey-800 position-fixed" style="background: #181818">
     <!-- Primary Navigation Menu -->
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-16 lg:h-20">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center ">
@@ -28,11 +28,11 @@
                 </div>
 
                 @auth()
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-jet-nav-link href="{{ route('consola.index') }}" :active="request()->routeIs('consola.index')">
-                            {{ __('messages.consumerService') }}
-                        </x-jet-nav-link>
-                    </div>
+                    <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
+                                    { __('messages.consumerService') }}
+                                </x-jet-nav-link>
+                            </div> -->
                 @endauth
 
                 <!-- Vista admin -->
@@ -59,7 +59,7 @@
                                     <x-slot name="content">
                                         <!-- Account Management -->
                                         <div class="block px-4 py-2 text-xs text-gray-400">
-                                            Acciones administrador.
+                                            Acciones administrador
                                         </div>
 
                                         <x-jet-dropdown-link href="{{ route('listaPro') }}">
@@ -68,6 +68,10 @@
 
                                         <x-jet-dropdown-link href="#">
                                             Admin. Users - ERROR
+                                        </x-jet-dropdown-link>
+
+                                        <x-jet-dropdown-link href="#">
+                                            Admin. Pedidos - ERROR
                                         </x-jet-dropdown-link>
 
                                         <div class="border-t border-gray-100"></div>
@@ -180,13 +184,12 @@
                                             </x-slot>
                         </x-jet-dropdown>
                     </div>
-                @else
                 @endif
 
-                <div class="text-black inline-flex relative w-fit">
+                <div class="text-black inline-flex relative mr-2 w-fit transition hover:scale-105">
                     @if (!empty(session()->get('CESTA')))
                         <div
-                            class="absolute inline-block top-0 right-0 bottom-auto  translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 py-1 px-2.5 text-xs leading-none text-center whitespace-nowrap align-baseline font-bold bg-indigo-700 text-white rounded-full z-10">
+                            class="absolute inline-block top-0 right-0 bottom-auto translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 py-1 px-2.5 text-xs leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-700 text-white rounded-full z-10">
                             {{ count(session()->get('CESTA')) }} </div>
                     @endif
                     <a href="{{ route('cesta.index') }}">
@@ -229,11 +232,19 @@
                             <x-slot name="content">
                                 <!-- Account Management -->
                                 <div class="block px-4 py-2 text-xs text-gray-400">
-                                    {{ __('Manage Account') }}
+                                    {{ __('navbar.textAccount') }}
                                 </div>
 
                                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                    {{ __('Profile') }}
+                                    {{ __('navbar.profile') }}
+                                </x-jet-dropdown-link>
+
+                                <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                    {{ __('navbar.orders') }}
+                                </x-jet-dropdown-link>
+
+                                <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                    {{ __('navbar.repairService') }}
                                 </x-jet-dropdown-link>
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -247,9 +258,8 @@
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}" x-data>
                                     @csrf
-
                                     <x-jet-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                                        {{ __('Log Out') }}
+                                        {{ __('navbar.logOut') }}
                                     </x-jet-dropdown-link>
                                 </form>
                             </x-slot>
@@ -260,13 +270,13 @@
                     <a href="{{ route('login') }}">
                         <button type="button"
                             class="inline-flex items-center mx-1 px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                            Iniciar sesión
+                            {{ __('navbar.login') }}
                         </button>
                     </a>
                     <a href="{{ route('register') }}">
                         <button type="button"
                             class="inline-flex items-center mx-1 px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                            Registrarse
+                            {{ __('navbar.register') }}
                         </button>
                     </a>
                 @endauth
@@ -274,10 +284,10 @@
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
-                <div class="text-black inline-flex relative w-fit mx-3">
+                <div class="text-black inline-flex relative w-fit mr-4">
                     @if (!empty(session()->get('CESTA')))
                         <div
-                            class="absolute inline-block top-0 right-0 bottom-auto  translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 py-1 px-2.5 text-xs leading-none text-center whitespace-nowrap align-baseline font-bold bg-indigo-700 text-white rounded-full z-10">
+                            class="absolute inline-block top-0 right-0 bottom-auto translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 py-1 px-2.5 text-xs leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-700 text-white rounded-full z-10">
                             {{ count(session()->get('CESTA')) }} </div>
                     @endif
                     <a href="{{ route('cesta.index') }}">
@@ -339,7 +349,15 @@
                 <div class="mt-3 space-y-1">
                     <!-- Account Management -->
                     <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
-                        {{ __('Profile') }}
+                        {{ __('navbar.profile') }}
+                    </x-jet-responsive-nav-link>
+
+                    <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                        {{ __('navbar.orders') }}
+                    </x-jet-responsive-nav-link>
+
+                    <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                        {{ __('navbar.repairService') }}
                     </x-jet-responsive-nav-link>
 
                     @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -389,14 +407,20 @@
                     @endif
                 </div>
             @else
-                <button type="button"
-                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                    Iniciar sesión
-                </button>
-                <button type="button"
-                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                    Registrarse
-                </button>
+                <div class="ml-3">
+                    <a href="{{ route('login') }}">
+                        <button type="button"
+                            class="block inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                            {{ __('navbar.login') }}
+                        </button>
+                    </a>
+                    <a href="{{ route('register') }}">
+                        <button type="button"
+                            class="block inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                            {{ __('navbar.register') }}
+                        </button>
+                    </a>
+                </div>
             @endauth
         </div>
     </div>

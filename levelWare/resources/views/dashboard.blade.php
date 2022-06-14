@@ -34,7 +34,7 @@
             <x-ProductListComponent :productos="$productosAll">
             </x-ProductListComponent>
 
-            <x-ProductListComponent titulo="Juegos" :productos="$juegos">
+            <x-ProductListComponent titulo="Periféricos" :productos="$peri">
             </x-ProductListComponent>
 
             <x-ProductListComponent titulo="Ultimos Productos añadidos" :productos="$proNuevos">
