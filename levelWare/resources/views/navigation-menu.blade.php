@@ -27,6 +27,14 @@
                     </x-jet-nav-link>
                 </div>
 
+                @auth()
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('consola.index') }}" :active="request()->routeIs('consola.index')">
+                            {{ __('messages.consumerService') }}
+                        </x-jet-nav-link>
+                    </div>
+                @endauth
+
                 <!-- Vista admin -->
                 @auth()
                     @if (Auth::user()->rol != 0)
@@ -175,11 +183,15 @@
                 @else
                 @endif
 
-
-                <div class="text-black">
+                <div class="text-black inline-flex relative w-fit">
+                    @if (!empty(session()->get('CESTA')))
+                        <div
+                            class="absolute inline-block top-0 right-0 bottom-auto  translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 py-1 px-2.5 text-xs leading-none text-center whitespace-nowrap align-baseline font-bold bg-indigo-700 text-white rounded-full z-10">
+                            {{ count(session()->get('CESTA')) }} </div>
+                    @endif
                     <a href="{{ route('cesta.index') }}">
                         <button id="carrito cesta"
-                            class="transition bg-green-600 hover:bg-indigo-500 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded">
+                            class="transition bg-green-700 hover:bg-indigo-600 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded">
                             <i class=" fa fa-shopping-cart" aria-hidden="true"></i>
                         </button>
                     </a>
@@ -262,8 +274,21 @@
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
+                <div class="text-black inline-flex relative w-fit mx-3">
+                    @if (!empty(session()->get('CESTA')))
+                        <div
+                            class="absolute inline-block top-0 right-0 bottom-auto  translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 py-1 px-2.5 text-xs leading-none text-center whitespace-nowrap align-baseline font-bold bg-indigo-700 text-white rounded-full z-10">
+                            {{ count(session()->get('CESTA')) }} </div>
+                    @endif
+                    <a href="{{ route('cesta.index') }}">
+                        <button id="carrito cesta"
+                            class="transition bg-green-700 hover:bg-indigo-600 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded">
+                            <i class=" fa fa-shopping-cart" aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
                 <button @click="open = ! open"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition">
+                    class="inline-flex items-center justify-center p-2 rounded-md text-white bg-green-700 hover:text-white hover:bg-indigo-600 focus:outline-none focus:text-white transition">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{ 'hidden': open, 'inline-flex': !open }" class="inline-flex"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -284,8 +309,13 @@
             </x-jet-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('consola.index') }}" :active="request()->routeIs('consola')">
-                {{ __('Consolas') }}
+            <x-jet-responsive-nav-link href="{{ route('producto.index') }}" :active="request()->routeIs('producto.index')">
+                {{ __('messages.games') }}
+            </x-jet-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('consola.index') }}" :active="request()->routeIs('consola.index')">
+                {{ __('messages.consoles') }}
             </x-jet-responsive-nav-link>
         </div>
 
@@ -301,8 +331,8 @@
                     @endif
 
                     <div>
-                        <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                        <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                        <div class="font-medium text-base text-white">{{ Auth::user()->name }}</div>
+                        <div class="font-medium text-sm text-gray-300">{{ Auth::user()->email }}</div>
                     </div>
                 </div>
 
