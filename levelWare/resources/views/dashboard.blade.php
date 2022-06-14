@@ -7,7 +7,7 @@
             // Lista de productos a pasar al componente.
             $productosAll = App\Models\Product::all()
                 ->where('stock', '>', 5)
-                ->take(30);
+                ->take(24);
 
             $proNuevos = \App\Models\Product::orderBy('created_at', 'desc')
                 ->take(12)
