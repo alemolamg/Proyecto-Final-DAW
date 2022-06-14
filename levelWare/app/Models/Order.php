@@ -13,4 +13,9 @@ class Order extends Model
 
     // Cambio la tabla de referencia a producto
     protected $table = "pedido";
+
+    public function User()
+    {
+        return $this->hasOne(User::class);
+    }
 }

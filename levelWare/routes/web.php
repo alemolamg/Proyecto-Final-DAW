@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\cestaController;
+use App\Http\Controllers\clientService;
 use App\Http\Controllers\consolaController;
 use App\Http\Controllers\pedidoController;
 use App\Http\Controllers\productController;
@@ -21,7 +22,9 @@ use Illuminate\Support\Facades\Mail;
 |
 */
 
-
+/**
+ * Este grupo de rutas deben estar logueadas y verificadas por correo electrónico
+ */
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -30,7 +33,9 @@ Route::middleware([
     Route::post('/aniadirCestaSesion', [cestaController::class, 'aniadirCestaSesion'])->name('aniadirCestaSesion');
     Route::put('/eliminarProducto', [cestaController::class, 'eliminarDeCesta'])->name('eliminarProducto');
     Route::post('/vaciarCesta', [cestaController::class, 'vaciarCesta'])->name('vaciarCesta');
+    Route::resource('clientService', clientService::class); //Controlador Servicio Cliente
 });
+
 
 /**
  * Rutas estándares
@@ -44,10 +49,6 @@ Route::get('/', function () {
     return view('dashboard');
 })->name('/');
 
-// Vista solo para administradores.
-/*Route::get('/admin', function () {
-    return view('administration.adminPage');
-})->middleware('auth', 'verified')->name('admin'); */
 
 
 // Controladores añadidos
@@ -67,6 +68,8 @@ Route::middleware([
     Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
     Route::get('/activarPro/{id}', [productController::class, 'activar'])->name('activarPro');
 });
+
+
 // Ejemplo de email.
 Route::get('prueba', function () {
     $correo = new PedidoMailable;

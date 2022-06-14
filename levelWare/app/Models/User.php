@@ -66,4 +66,9 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function Rol()
+    {
+        return $this->hasOne(Rol::class);
+    }
 }
