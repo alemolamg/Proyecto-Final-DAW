@@ -37,6 +37,7 @@ $xbox = \App\Models\Product::where('nombre', 'LIKE', '%xbox%')
                         class="form-control relative flex-auto min-w-0 block px-5 py-3 text-base font-normal text-white bg-gray-900/20 bg-clip-padding border border-solid border-green-700 rounded-l-lg transition ease-in-out m-0 focus:text-white focus:bg-gray-900/40 focus:border-indigo-600 focus:outline-none"
                         placeholder="{{ __('messages.search') }}" aria-label="Search" aria-describedby="button-addon2"
                         name="clave" id="clave">
+                    <input type="hidden" name="ruta" value="Product.busquedaPro">
                     <button
                         class="btn inline-block px-6 py-2.5 bg-green-700 text-white font-bold font-medium text-md leading-tight uppercase rounded-r-lg hover:bg-indigo-600 hover:shadow-lg focus:bg-blue-700 focus:outline-none focus:ring-0 active:bg-indigo-600 transition duration-150 ease-in-out flex items-center"
                         type="submit" id="btnLupa" name="btnLupa">

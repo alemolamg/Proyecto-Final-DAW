@@ -28,7 +28,7 @@
 
     <div class="max-w mx-auto sm:px-1 lg:px-0 px-1">
 
-        <x-ProductListComponent titulo="Resultados de: {{ $clave }}" :productos="$busqueda">
+        <x-ProductListComponent titulo="Resultados de: {{ $clave }}" :productos="$productos">
         </x-ProductListComponent>
 
     </div>

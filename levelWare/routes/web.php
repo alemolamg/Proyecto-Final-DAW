@@ -67,6 +67,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
     Route::get('/activarPro/{id}', [productController::class, 'activar'])->name('activarPro');
+    Route::get('/searchProductsAdmin', [productController::class, 'searchProductsAdmin'])->name('searchProductsAdmin');
 });
 
 
