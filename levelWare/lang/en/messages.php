@@ -5,4 +5,5 @@ return [
     'games' => 'Games',
     'consoles' => 'Consoles',
     'consumerService' => 'Consumer Service',
+    'search' => 'Search',
 ];

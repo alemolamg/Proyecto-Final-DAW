@@ -171,4 +171,13 @@ class productController extends Controller
         //$productos = Product::all();
         return view('product.listaProductos')->with('productos', $productos);
     }
+
+    public function searchProducts(Request $request)
+    {
+        $busqueda = \App\Models\Product::where('nombre', 'LIKE', "%$request->clave%")
+            ->orWhere('descripcion', 'LIKE', "%$request->clave%")
+            ->get();
+
+        return view('Product.busquedaPro')->with('busqueda', $busqueda)->with('clave', $request->clave);
+    }
 }
