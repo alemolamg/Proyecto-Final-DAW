@@ -162,14 +162,14 @@ class productController extends Controller
     public function activar($id)
     {
         Product::withTrashed()->where('id', $id)->restore();
-        return redirect()->route('listaPro');
+        return redirect()->route('product.listaPro');
     }
 
     public function listarProductos()
     {
         $productos = Product::withTrashed()->get(); // SoftDeletes propertie.
         //$productos = Product::all();
-        return view('product.listaProductos')->with('productos', $productos);
+        return view('product.listapro')->with('productos', $productos);
     }
 
     public function searchProducts(Request $request)
@@ -177,7 +177,15 @@ class productController extends Controller
         $busqueda = \App\Models\Product::where('nombre', 'LIKE', "%$request->clave%")
             ->orWhere('descripcion', 'LIKE', "%$request->clave%")
             ->get();
+        return view('Product.busquedaPro')->with('productos', $busqueda)->with('clave', $request->clave);
+    }
 
-        return view('Product.busquedaPro')->with('busqueda', $busqueda)->with('clave', $request->clave);
+    public function searchProductsAdmin(Request $request)
+    {
+        $busqueda = \App\Models\Product::withTrashed()
+            ->where('nombre', 'LIKE', "%$request->clave%")
+            ->orWhere('descripcion', 'LIKE', "%$request->clave%")
+            ->get();
+        return view('Product.listaPro')->with('productos', $busqueda)->with('clave', $request->clave);
     }
 }

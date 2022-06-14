@@ -11,10 +11,17 @@
                     ->orderBy('updated_at', 'desc')
                     ->get();
 
-                $xbox = \App\Models\Product::where('descripcion', 'LIKE', '%xbox%')->get();
-
-                $nintendo = \App\Models\Product::where('descripcion', 'LIKE', '%nintendo%')->get();
-                $ps = \App\Models\Product::where('descripcion', 'LIKE', '%playstation%')->get();
+                $xbox = \App\Models\Product::where('nombre', 'LIKE', '%xbox%')
+                    ->orWhere('descripcion', 'LIKE', '%xbox%')
+                    ->get();
+                $nintendo = \App\Models\Product::where('nombre', 'LIKE', '%nintendo%')
+                    ->orWhere('descripcion', 'LIKE', '%nintendo%')
+                    ->get();
+                $ps = \App\Models\Product::where('nombre', 'LIKE', '%playstation%')
+                    ->orWhere('descripcion', 'LIKE', '%playstation%')
+                    ->orWhere('descripcion', 'LIKE', '%PS5%')
+                    ->orWhere('nombre', 'LIKE', '%ps3%')
+                    ->get();
                 ?>
 
                 <x-ProductListComponent titulo="Consolas" :productos="$consolas">
