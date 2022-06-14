@@ -70,6 +70,9 @@ Route::middleware([
 });
 
 
+Route::get('/searchProducts', [productController::class, 'searchProducts'])->name('searchProducts');
+
+
 // Ejemplo de email.
 Route::get('prueba', function () {
     $correo = new PedidoMailable;
