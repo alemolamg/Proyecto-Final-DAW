@@ -39,10 +39,11 @@ Route::middleware([
 
 /**
  * Rutas estándares
- * Son rutas que tienen la información necesaria para
+ * Son rutas que redirigen al menú de inicio. No se puede simplificar en solo una porque Laravel
+ * las utiliza de manera interna con los dos nombres, pero 'dashboard' se redirige a '/'
  */
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect('dashboard');
 })->name('dashboard');
 
 Route::get('/', function () {
