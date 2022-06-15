@@ -53,24 +53,23 @@ $precioTotal = 0;
 
 </div>
 @if (!empty($arrayCesta))
-    <div class="p-2 grid grid-cols-4 align-content-end">
-        <div></div>
-        <div id="divPrecio" class="text-bold text-uppercase">
-            <p class="text-bold text-uppercase">{{ __('cart.totalPrice') }}: {{ $precioTotal }}€ </p>
-        </div>
-        <div>
+    <div class="p-2 flex flex-row-reverse  align-content-end">
+        <div class="mx-3 ">
             <form action="{{ route('vaciarCesta') }}" id="vaciarCesta" method="POST">
                 @csrf
                 <input type="submit" value="Vaciar Cesta"
-                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 border border-red-500 rounded">
             </form>
         </div>
-        <div id="divBTN">
-            <form method="POST" action="{{ route('pedido.store') }}">
+        <div id="divBTN" class="mx-3">
+            <form method="get" action="{{ route('pedido.index') }}">
                 @csrf
                 <input type="submit" value="Comprar todo"
                     class="transition bg-green-600 hover:bg-indigo-500 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded">
             </form>
+        </div>
+        <div id="divPrecio" class="mx-3 pr-5 pt-2 text-bold text-uppercase text-xl">
+            <p class="text-bold text-uppercase">{{ __('cart.totalPrice') }}: {{ $precioTotal }}€ </p>
         </div>
     </div>
 @endif

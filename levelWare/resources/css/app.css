@@ -7,3 +7,10 @@
     background: #272727;
     color: white;
 }
+
+
+.trimImg {
+    max-height:800px;
+    max-width: 620px;
+    overflow: hidden;
+}

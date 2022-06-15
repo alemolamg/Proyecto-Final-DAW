@@ -4,7 +4,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 p-0 levelware">
             <div id="container" class="grid md:grid-flow-col md:mx-12 text-justify justify-center md:justify-between ">
 
-                <div id="imgPro" class="bg-red-600 mx-0 p-0 items-center align-content-center">
+                <div id="imgPro" class="bg-white mx-0 p-0 flex items-center align-content-center">
                     <img class="w-auto max-w-sm md:w-full rounded-lg h-auto p-0 aling-center justify-center items-center"
                         src="{{ asset($pro->imagen) }}" alt="{{ $pro->imagen }}">
                 </div>
