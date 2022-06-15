@@ -34,6 +34,7 @@ Route::middleware([
     Route::put('/eliminarProducto', [cestaController::class, 'eliminarDeCesta'])->name('eliminarProducto');
     Route::post('/vaciarCesta', [cestaController::class, 'vaciarCesta'])->name('vaciarCesta');
     Route::resource('clientService', clientService::class); //Controlador Servicio Cliente
+    Route::resource('pedido', pedidoController::class);     //Controlador Pedido
 });
 
 
@@ -56,7 +57,6 @@ Route::get('/', function () {
 Route::resource('producto', productController::class);  //Controlador Producto
 Route::resource('consola', consolaController::class);   //Controlador Consola
 Route::resource('cesta', cestaController::class);       //Controlador Cesta
-Route::resource('pedido', pedidoController::class);     //Controlador Pedido
 
 
 // Controles Administrador

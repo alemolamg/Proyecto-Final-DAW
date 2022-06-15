@@ -19,7 +19,8 @@ class pedidoController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        return view('pedido.index')->with('user', $user);
     }
 
     /**
@@ -43,7 +44,6 @@ class pedidoController extends Controller
         if (!empty(session()->get('CESTA'))) {
             $precioTotal = 0;
             $cesta = session()->get('CESTA');
-            $idPedido = -1;
 
             try {
                 // Creación del pedido
@@ -53,8 +53,7 @@ class pedidoController extends Controller
                 $newOrder->estado = 0;  // Estado 0 = en preparación.
                 $newOrder->precioTotal = $precioTotal;
 
-                // Guardamos el pedido nuevo
-                $newOrder->save();
+                $newOrder->save();  // Guardamos el pedido nuevo
 
                 // Añadimos los produtos comprados
                 foreach ($cesta as $key => $pc) {
@@ -77,12 +76,11 @@ class pedidoController extends Controller
             } catch (QueryException $exception) {
                 return "ERROR al crear el pedido.";
             }
-        } else {
-            // La cesta está vacía
+        } else {    // La cesta está vacía
             return "La cesta está vacía";
         }
 
-        session()->forget('CESTA');
+        session()->forget('CESTA'); //Vaciamos la cesta
         return "Hemos estado en el creado de la cesta. El precio total sería: " . $precioTotal;
     }
 
