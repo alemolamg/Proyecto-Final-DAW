@@ -2,7 +2,8 @@
     <div class="py-3 max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-hidden shadow-sm sm:rounded-lg">
         <div id="barraBuscar" class="mt-3 pt-1 flex justify-center">
             <div class="w-auto lg:w-auto">
-                <form action="{{ route('searchProductsAdmin') }}">
+                <form action="#">
+                    <!--TODO: Cambiar por buscarUser en el futuro -->
                     @csrf
                     <div
                         class="input-group relative flex flex-wrap items-stretch mb-4 focus:border-indigo-600 focus:outline-none">
@@ -30,14 +31,13 @@
 
         <div class="p-5 border-b border-gray-200">
             <div class="grid grid-cols-2">
-                <h1 class="text-2xl uppercase">Lista De Productos</h1>
+                <h1 class="text-2xl uppercase">Lista De users</h1>
 
-                <div id="nuevoPro" class="pb-2 align-content-end justify-end">
-                    <a href="{{ route('producto.create') }}"
-                        class="align-content-end justify-end justify-content-end">
-                        <button type="button" id="nuevoPro"
+                <div id="nuevouser" class="pb-2 align-content-end justify-end">
+                    <a href="{{ route('user.create') }}" class="align-content-end justify-end justify-content-end">
+                        <button type="button" id="nuevouser"
                             class="transition bg-green-600 hover:bg-indigo-500 hover:text-white text-white font-bold duration-300 py-2 px-4 rounded">
-                            Añadir producto nuevo
+                            Añadir usuario nuevo
                         </button>
                     </a>
                 </div>
@@ -59,15 +59,15 @@
                         </th>
                         <th
                             class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
-                            Tipo Producto
+                            Tipo usuario
                         </th>
                         <th
                             class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
-                            Precio
+                            Localidad
                         </th>
                         <th
                             class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
-                            Stock
+                            Dirección
                         </th>
                         <th
                             class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
@@ -77,46 +77,44 @@
                     </tr>
                 </thead>
                 <tbody class="block md:table-row-group">
-                    @foreach ($productos as $pro)
+                    @foreach ($users as $user)
                         <tr class=" border border-grey-500 md:border-none block md:table-row">
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                {{ $pro->id }}
+                                {{ $user->id }}
                             </td>
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                {{ $pro->nombre }}
+                                {{ $user->name }} {{ $user->apellidos }}
                             </td>
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                @if ($pro->tipoPro == 1)
-                                    Consola
-                                @elseif($pro->tipoPro == 2)
-                                    Juego
+                                @if ($user->rol == 0)
+                                    Cliente
                                 @else
-                                    Periférico
+                                    Administrador
                                 @endif
                             </td>
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                {{ $pro->precio }}
+                                {{ $user->provincia }}, {{ $user->localidad }}
                             </td>
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                {{ $pro->stock }}
+                                {{ $user->direccion }}
                             </td>
                             <td
                                 class="p-2 md:border md:border-grey-500 text-left block md:table-cell content-start align-content: space-between;">
                                 <div class="grid grid-cols-3 ">
-                                    <a class="" href="{{ route('producto.show', $pro->id) }}">
+                                    <a class="" href="{{ route('user.show', $user->id) }}">
                                         <button
                                             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
                                             Mostrar
                                         </button>
                                     </a>
-                                    <a href="{{ route('producto.edit', $pro->id) }}">
+                                    <a href="{{ route('user.edit', $user->id) }}">
                                         <button
                                             class="bg-amber-400 hover:bg-amber-500 text-white font-bold py-1 px-2 border border-amber-400 rounded">
                                             Editar
                                         </button>
                                     </a>
-                                    @if (isset($pro->deleted_at) == null)
-                                        <form action="{{ route('producto.destroy', $pro->id) }}" method="POST">
+                                    @if (isset($user->deleted_at) == null)
+                                        <form action="{{ route('user.destroy', $user->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit"
@@ -125,7 +123,7 @@
                                             </button>
                                         </form>
                                     @else
-                                        <a href="{{ route('activarPro', $pro->id) }}">
+                                        <a href="{{ route('activaruser', $user->id) }}">
                                             <button type="submit"
                                                 class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-green-500 rounded">
                                                 Restaurar

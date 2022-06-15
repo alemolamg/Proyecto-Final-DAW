@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class userController extends Controller
@@ -80,5 +81,11 @@ class userController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function listarUsuarios()
+    {
+        $users = User::withTrashed()->get(); // SoftDeletes propertie.
+        return view('user.listaUsers')->with('users', $users);
     }
 }

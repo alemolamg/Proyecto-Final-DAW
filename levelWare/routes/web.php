@@ -5,6 +5,7 @@ use App\Http\Controllers\clientService;
 use App\Http\Controllers\consolaController;
 use App\Http\Controllers\pedidoController;
 use App\Http\Controllers\productController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 use App\Mail\PedidoMailable;
 use App\Models\Product;
@@ -57,6 +58,7 @@ Route::get('/', function () {
 Route::resource('producto', productController::class);  //Controlador Producto
 Route::resource('consola', consolaController::class);   //Controlador Consola
 Route::resource('cesta', cestaController::class);       //Controlador Cesta
+Route::resource('user', userController::class);       //Controlador Cesta
 
 
 // Controles Administrador
@@ -67,6 +69,7 @@ Route::middleware([
     'adminAccess'
 ])->group(function () {
     Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
+    Route::get('/listaUsers', [userController::class, 'listarUsuarios'])->name('listaUsers');
     Route::get('/activarPro/{id}', [productController::class, 'activar'])->name('activarPro');
     Route::get('/searchProductsAdmin', [productController::class, 'searchProductsAdmin'])->name('searchProductsAdmin');
 });
