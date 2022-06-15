@@ -60,10 +60,12 @@ class pedidoController extends Controller
                 foreach ($cesta as $key => $pc) {
                     $newPro = new productoCesta();
                     $newPro->idPedido = $newOrder->id;
-                    $idPedido = $newOrder->id;
                     $newPro->idPro = $pc['idPro'];
                     $newPro->cantidad = $pc['cant'];
                     $newPro->save();
+
+                    // Se baja el stock del producto
+                    self::bajarStockPro(Product::findOrFail($pc['idPro']), $pc['cant']);
 
                     // Se añade el precio de este producto al total.
                     $precioTotal += self::incrementoPrecio($pc['idPro'], $pc['cant']);
@@ -82,6 +84,15 @@ class pedidoController extends Controller
 
         session()->forget('CESTA');
         return "Hemos estado en el creado de la cesta. El precio total sería: " . $precioTotal;
+    }
+
+    /**
+     * Baja el stock de un producto
+     */
+    private function bajarStockPro(Product $pro, int $cant)
+    {
+        $pro->stock = $pro->stock - $cant;
+        $pro->save();
     }
 
     /**
