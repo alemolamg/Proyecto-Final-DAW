@@ -8,7 +8,7 @@
                 <div class="w-full xl:w-3/4 lg:w-11/12 flex">
                     <!-- Col -->
                     <div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-                        style="background-image: url('https://th.bing.com/th/id/R.304961cab66f4b7fb19cd8e6379621c5?rik=6bGc4HNAzPZjDw&riu=http%3a%2f%2f24.media.tumblr.com%2ftumblr_mej8exgplo1rpgf8io1_500.png&ehk=%2fD%2fvhKakBSHsp74mUC0OudKxQU7HK94%2bK4arxIERv94%3d&risl=&pid=ImgRaw&r=0')">
+                        style="background-image: url('https://th.bing.com/th/id/R.c19e18913710d61038e3c2f9c103060f?rik=7j1odrfCg8GUcA&riu=http%3a%2f%2fmedia.idownloadblog.com%2fwp-content%2fuploads%2f2017%2f05%2fLegend-of-Zelda-Breath-of-the-Wild-iPhone-Plus-4.jpg&ehk=Yn9KPAhDojqK%2bC8BBQwhK1UgIjg2BBY1YqnYeWvHhEc%3d&risl=&pid=ImgRaw&r=0')">
                     </div>
                     <!-- Col -->
                     <div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">

@@ -12,17 +12,18 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-7 md:flex">
+                    <!-- No se activa hasta lg -->
                     <x-jet-nav-link href="{{ route('/') }}" :active="request()->routeIs('/')">
                         {{ __('Menú principal') }}
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-7 sm:flex">
                     <x-jet-nav-link href="{{ route('producto.index') }}" :active="request()->routeIs('producto.index')">
                         {{ __('messages.games') }}
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-7 sm:flex">
                     <x-jet-nav-link href="{{ route('consola.index') }}" :active="request()->routeIs('consola.index')">
                         {{ __('messages.consoles') }}
                     </x-jet-nav-link>
@@ -30,17 +31,17 @@
 
                 @auth()
                     <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                                                <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
-                                                                    { __('messages.consumerService') }}
-                                                                </x-jet-nav-link>
-                                                            </div> -->
+                                                                                        <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
+                                                                                            { __('messages.consumerService') }}
+                                                                                        </x-jet-nav-link>
+                                                                                    </div> -->
                 @endauth
 
                 <!-- Vista admin -->
                 @auth()
                     @if (Auth::user()->rol != 0)
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
-                            <div class="ml-3 relative">
+                            <div class="ml-2 relative">
                                 <x-jet-dropdown align="right" width="48">
                                     <x-slot name="trigger">
                                         <span class="inline-flex rounded">
@@ -244,7 +245,7 @@
                                     {{ __('navbar.orders') }}
                                 </x-jet-dropdown-link>
 
-                                <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                <x-jet-dropdown-link href="{{ route('clientService.index') }}">
                                     {{ __('navbar.repairService') }}
                                 </x-jet-dropdown-link>
 

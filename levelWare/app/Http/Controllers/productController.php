@@ -162,7 +162,7 @@ class productController extends Controller
     public function activar($id)
     {
         Product::withTrashed()->where('id', $id)->restore();
-        return redirect()->route('product.listaPro');
+        return redirect()->route('listaPro');
     }
 
     public function listarProductos()
