@@ -174,7 +174,7 @@ class productController extends Controller
 
     public function searchProducts(Request $request)
     {
-        $busqueda = \App\Models\Product::where('nombre', 'LIKE', "%$request->clave%")
+        $busqueda = Product::where('nombre', 'LIKE', "%$request->clave%")
             ->orWhere('descripcion', 'LIKE', "%$request->clave%")
             ->get();
         return view('Product.busquedaPro')->with('productos', $busqueda)->with('clave', $request->clave);
@@ -182,7 +182,7 @@ class productController extends Controller
 
     public function searchProductsAdmin(Request $request)
     {
-        $busqueda = \App\Models\Product::withTrashed()
+        $busqueda = Product::withTrashed()
             ->where('nombre', 'LIKE', "%$request->clave%")
             ->orWhere('descripcion', 'LIKE', "%$request->clave%")
             ->get();
