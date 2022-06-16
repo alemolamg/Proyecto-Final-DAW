@@ -8,7 +8,6 @@ use App\Http\Controllers\productController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 use App\Mail\PedidoMailable;
-use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -58,7 +57,7 @@ Route::get('/', function () {
 Route::resource('producto', productController::class);  //Controlador Producto
 Route::resource('consola', consolaController::class);   //Controlador Consola
 Route::resource('cesta', cestaController::class);       //Controlador Cesta
-Route::resource('user', userController::class);       //Controlador Cesta
+Route::resource('user', userController::class);         //Controlador Cesta
 
 
 // Controles Administrador

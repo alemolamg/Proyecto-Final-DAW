@@ -31,10 +31,10 @@
 
                 @auth()
                     <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                                                                        <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
-                                                                                            { __('messages.consumerService') }}
-                                                                                        </x-jet-nav-link>
-                                                                                    </div> -->
+                                                                                                    <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
+                                                                                                        { __('messages.consumerService') }}
+                                                                                                    </x-jet-nav-link>
+                                                                                                </div> -->
                 @endauth
 
                 <!-- Vista admin -->
@@ -76,8 +76,9 @@
                                             Admin. Pedidos - ERROR
                                         </x-jet-dropdown-link>
 
-                                        <div class="border-t border-gray-100"></div>
-
+                                        <x-jet-dropdown-link href="#">
+                                            Admin. Reparaciones - ERROR
+                                        </x-jet-dropdown-link>
                                     </x-slot>
                                 </x-jet-dropdown>
                             </div>
