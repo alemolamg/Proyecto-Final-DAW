@@ -36,6 +36,7 @@ Route::middleware([
     Route::post('/vaciarCesta', [cestaController::class, 'vaciarCesta'])->name('vaciarCesta');
     Route::resource('clientService', clientService::class); //Controlador Servicio Cliente
     Route::resource('pedido', pedidoController::class);     //Controlador Pedido
+    Route::get('/misPedidos', [pedidoController::class, 'pedidosUser'])->name('pedidosUser');
 });
 
 
@@ -70,7 +71,6 @@ Route::middleware([
 ])->group(function () {
     Route::get('/listaUsers', [userController::class, 'listarUsuarios'])->name('listaUsers');
     Route::get('/listaPedidos', [pedidoController::class, 'listarPedidos'])->name('listaPedidos');
-    Route::get('/misPedidos', [pedidoController::class, 'pedidosUser'])->name('pedidosUser');
     Route::get('/activarPedido/{id}', [pedidoController::class, 'activar'])->name('activarPedido');
     //Route::get('/listaRep', [Reparacion::class, 'listarRep'])->name('listaRep');
     Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
