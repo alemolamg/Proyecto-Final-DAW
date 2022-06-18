@@ -151,8 +151,10 @@ class pedidoController extends Controller
      */
     public function destroy($id)
     {
-        $pro = Order::findOrFail($id);
-        $pro->delete();
+        $ped = Order::findOrFail($id);
+        $ped->estado = -1;
+        $ped->save();
+        $ped->delete();
         return redirect()->route('listaPedidos');
     }
 

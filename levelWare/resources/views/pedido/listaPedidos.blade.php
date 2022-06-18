@@ -107,7 +107,7 @@
                                             </button>
                                         </form>
                                     @else
-                                        <a href="{{ route('activarped', $ped->id) }}">
+                                        <a href="{{ route('activarPedido', $ped->id) }}">
                                             <button type="submit"
                                                 class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 border border-green-500 rounded">
                                                 Restaurar

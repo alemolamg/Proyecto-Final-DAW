@@ -68,10 +68,11 @@ Route::middleware([
     'verified',
     'adminAccess'
 ])->group(function () {
-    Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
     Route::get('/listaUsers', [userController::class, 'listarUsuarios'])->name('listaUsers');
     Route::get('/listaPedidos', [pedidoController::class, 'listarPedidos'])->name('listaPedidos');
+    Route::get('/activarPedido/{id}', [pedidoController::class, 'activar'])->name('activarPedido');
     //Route::get('/listaRep', [Reparacion::class, 'listarRep'])->name('listaRep');
+    Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
     Route::get('/activarPro/{id}', [productController::class, 'activar'])->name('activarPro');
     Route::get('/searchProductsAdmin', [productController::class, 'searchProductsAdmin'])->name('searchProductsAdmin');
 });
