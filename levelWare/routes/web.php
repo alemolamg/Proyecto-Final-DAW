@@ -8,6 +8,7 @@ use App\Http\Controllers\productController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 use App\Mail\PedidoMailable;
+use App\Models\Reparacion;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -69,6 +70,8 @@ Route::middleware([
 ])->group(function () {
     Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
     Route::get('/listaUsers', [userController::class, 'listarUsuarios'])->name('listaUsers');
+    Route::get('/listaPedidos', [pedidoController::class, 'listarPedidos'])->name('listaPedidos');
+    //Route::get('/listaRep', [Reparacion::class, 'listarRep'])->name('listaRep');
     Route::get('/activarPro/{id}', [productController::class, 'activar'])->name('activarPro');
     Route::get('/searchProductsAdmin', [productController::class, 'searchProductsAdmin'])->name('searchProductsAdmin');
 });
@@ -82,4 +85,4 @@ Route::get('prueba', function () {
     $correo = new PedidoMailable;
     Mail::to(Auth::user()->email)->send($correo);
     return "Mensaje enviado";
-});
+})->middleware('auth:sanctum');

@@ -31,10 +31,10 @@
 
                 @auth()
                     <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                                                                                    <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
-                                                                                                        { __('messages.consumerService') }}
-                                                                                                    </x-jet-nav-link>
-                                                                                                </div> -->
+                                                                                                            <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
+                                                                                                                { __('messages.consumerService') }}
+                                                                                                            </x-jet-nav-link>
+                                                                                                        </div> -->
                 @endauth
 
                 <!-- Vista admin -->
@@ -72,8 +72,8 @@
                                             Admin. Users
                                         </x-jet-dropdown-link>
 
-                                        <x-jet-dropdown-link href="#">
-                                            Admin. Pedidos - ERROR
+                                        <x-jet-dropdown-link href="{{ route('listaPedidos') }}">
+                                            Admin. Pedidos
                                         </x-jet-dropdown-link>
 
                                         <x-jet-dropdown-link href="#">
@@ -306,8 +306,8 @@
                         <path :class="{ 'hidden': open, 'inline-flex': !open }" class="inline-flex"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{ 'hidden': !open, 'inline-flex': open }" class="hidden"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <path :class="{ 'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -338,8 +338,8 @@
                 <div class="flex items-center px-4">
                     @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                         <div class="shrink-0 mr-3">
-                            <img class="h-10 w-10 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
-                                alt="{{ Auth::user()->name }}" />
+                            <img class="h-10 w-10 rounded-full object-cover"
+                                src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                         </div>
                     @endif
 

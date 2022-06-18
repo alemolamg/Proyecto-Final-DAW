@@ -135,7 +135,13 @@ class pedidoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "Entrado en update";
+        $pedido = Order::find($id);
+        if (isset($request->estado)) {
+            $pedido->estado = $request->estado;
+        }
+        $pedido->save();
+        return redirect()->route('listaPedidos');
     }
 
     /**
@@ -147,5 +153,11 @@ class pedidoController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function listarPedidos()
+    {
+        $pedidos = Order::withTrashed()->get(); // SoftDeletes propertie.
+        return view('pedido.listaPedidos')->with('pedidos', $pedidos);
     }
 }
