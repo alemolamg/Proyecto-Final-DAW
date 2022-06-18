@@ -3,7 +3,7 @@ $arrayCesta = session()->get('CESTA');
 $precioTotal = 0;
 ?>
 
-<div class="grid grid-flow-col text-center align-content-center levelware">
+<div class="grid grid-flow-col text-center align-content-center levelware md:mx-3">
     <table class="table-fixed">
         <thead>
             <tr>
