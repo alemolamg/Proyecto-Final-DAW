@@ -31,10 +31,10 @@
 
                 @auth()
                     <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                                                                                            <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
-                                                                                                                { __('messages.consumerService') }}
-                                                                                                            </x-jet-nav-link>
-                                                                                                        </div> -->
+                                                                                                                <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
+                                                                                                                    { __('messages.consumerService') }}
+                                                                                                                </x-jet-nav-link>
+                                                                                                            </div> -->
                 @endauth
 
                 <!-- Vista admin -->
@@ -242,7 +242,7 @@
                                     {{ __('navbar.profile') }}
                                 </x-jet-dropdown-link>
 
-                                <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                <x-jet-dropdown-link href="{{ route('pedidosUser') }}">
                                     {{ __('navbar.orders') }}
                                 </x-jet-dropdown-link>
 

@@ -169,4 +169,10 @@ class pedidoController extends Controller
         $pedidos = Order::withTrashed()->get(); // SoftDeletes propertie.
         return view('pedido.listaPedidos')->with('pedidos', $pedidos);
     }
+
+    public function pedidosUser()
+    {
+        $pedidos = Order::where('idUser', Auth::user())->get();
+        return view('pedido.pedidosUser')->with('pedidos', $pedidos);
+    }
 }

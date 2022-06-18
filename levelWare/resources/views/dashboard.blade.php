@@ -1,8 +1,15 @@
 <?php
 // Lista de productos a pasar al componente.
-$productosAll = App\Models\Product::all()
+/*$productosAll = App\Models\Product::all()
     ->where('stock', '>', 5)
     ->take(24);
+    */
+
+//Ordena los productos de manera aleatoria
+$productosAll = DB::table('producto')
+    ->inRandomOrder()
+    ->take(24)
+    ->get();
 
 $proNuevos = \App\Models\Product::orderBy('created_at', 'desc')
     ->take(12)
@@ -22,7 +29,7 @@ $peri = \App\Models\Product::where('tipoPro', 3)
     ->get();
 
 $xbox = \App\Models\Product::where('nombre', 'LIKE', '%xbox%')
-    ->where('descripcion', 'LIKE', '%xbox%')
+    ->orWhere('descripcion', 'LIKE', '%xbox%')
     ->get();
 ?>
 

@@ -70,6 +70,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/listaUsers', [userController::class, 'listarUsuarios'])->name('listaUsers');
     Route::get('/listaPedidos', [pedidoController::class, 'listarPedidos'])->name('listaPedidos');
+    Route::get('/misPedidos', [pedidoController::class, 'pedidosUser'])->name('pedidosUser');
     Route::get('/activarPedido/{id}', [pedidoController::class, 'activar'])->name('activarPedido');
     //Route::get('/listaRep', [Reparacion::class, 'listarRep'])->name('listaRep');
     Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
