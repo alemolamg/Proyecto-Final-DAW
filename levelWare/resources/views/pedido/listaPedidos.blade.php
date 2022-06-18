@@ -53,7 +53,8 @@
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                 {{ $ped->precioTotal }}</td>
                             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                                <form action="{{ route('pedido.update', $ped->id) }}" class="flex flex-col">
+                                <form action="{{ route('pedido.update', $ped->id) }}" method="POST"
+                                    class="flex flex-col">
                                     @csrf
                                     @method('PUT')
                                     <select

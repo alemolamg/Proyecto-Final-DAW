@@ -72,4 +72,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasOne(Rol::class);
     }
+
+    public function pedido()
+    {
+        return $this->belongsTo(Order::class);
+    }
 }

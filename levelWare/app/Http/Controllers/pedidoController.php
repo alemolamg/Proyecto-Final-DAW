@@ -135,7 +135,6 @@ class pedidoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return "Entrado en update";
         $pedido = Order::find($id);
         if (isset($request->estado)) {
             $pedido->estado = $request->estado;
@@ -152,7 +151,15 @@ class pedidoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pro = Order::findOrFail($id);
+        $pro->delete();
+        return redirect()->route('listaPedidos');
+    }
+
+    public function activar($id)
+    {
+        Order::withTrashed()->where('id', $id)->restore();
+        return redirect()->route('listaPedidos');
     }
 
     public function listarPedidos()
