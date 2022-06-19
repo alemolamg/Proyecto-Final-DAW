@@ -9,15 +9,15 @@ use PhpParser\Node\Expr\Cast\Array_;
 class OrderListComponent extends Component
 {
 
-    public $pedidos;
+    public $pedido;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(array $pedidos)
+    public function __construct(Order $pedido)
     {
-        $this->pedidos = $pedidos;
+        $this->pedido = $pedido;
     }
 
     /**

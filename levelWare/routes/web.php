@@ -12,16 +12,6 @@ use App\Models\Reparacion;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 /**
  * Este grupo de rutas deben estar logueadas y verificadas por correo electrónico
@@ -72,7 +62,6 @@ Route::middleware([
     Route::get('/listaUsers', [userController::class, 'listarUsuarios'])->name('listaUsers');
     Route::get('/listaPedidos', [pedidoController::class, 'listarPedidos'])->name('listaPedidos');
     Route::get('/activarPedido/{id}', [pedidoController::class, 'activar'])->name('activarPedido');
-    //Route::get('/listaRep', [Reparacion::class, 'listarRep'])->name('listaRep');
     Route::get('/listaPro', [productController::class, 'listarProductos'])->name('listaPro');
     Route::get('/activarPro/{id}', [productController::class, 'activar'])->name('activarPro');
     Route::get('/searchProductsAdmin', [productController::class, 'searchProductsAdmin'])->name('searchProductsAdmin');

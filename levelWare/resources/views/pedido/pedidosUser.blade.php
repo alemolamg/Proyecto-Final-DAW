@@ -9,7 +9,8 @@
         <div id="listaPedidos" class="md:px-4 px-2 py-1 flex flex-wrap justify-between">
             @if (!empty($pedidos))
                 @foreach ($pedidos as $ped)
-                    <x-orderListComponent :pedidos="$ped"></x-orderListComponent>
+                    <x-order-list-component :pedidos="$ped">
+                    </x-order-list-component>
                 @endforeach
             @else
                 <p>No has realizado ningún pedido</p>

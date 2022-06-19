@@ -9,6 +9,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Nette\Utils\DateTime;
+use Illuminate\Support\Facades\DB;
 
 class pedidoController extends Controller
 {
@@ -172,7 +173,19 @@ class pedidoController extends Controller
 
     public function pedidosUser()
     {
-        $pedidos = Order::where('idUser', Auth::user())->get();
+        $user = Auth::user();
+        $pedidos = Order::where('idUser', Auth::user()->id)->get();
+        //$pedidos = Order::all();
+        //$pedidos = DB::table('pedido')->where('idUser', Auth::user()->id);
+
+        //$peds = DB::select("select * FROM pedido WHERE idUser = $user->id ");
+        //$pedidos = self::JSON2Array($peds);
         return view('pedido.pedidosUser')->with('pedidos', $pedidos);
+        //return $pedidos;
+    }
+
+    private function JSON2Array($data)
+    {
+        return  (array) json_decode(stripslashes($data));
     }
 }
