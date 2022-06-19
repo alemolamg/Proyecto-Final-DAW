@@ -173,19 +173,7 @@ class pedidoController extends Controller
 
     public function pedidosUser()
     {
-        $user = Auth::user();
         $pedidos = Order::where('idUser', Auth::user()->id)->get();
-        //$pedidos = Order::all();
-        //$pedidos = DB::table('pedido')->where('idUser', Auth::user()->id);
-
-        //$peds = DB::select("select * FROM pedido WHERE idUser = $user->id ");
-        //$pedidos = self::JSON2Array($peds);
         return view('pedido.pedidosUser')->with('pedidos', $pedidos);
-        //return $pedidos;
-    }
-
-    private function JSON2Array($data)
-    {
-        return  (array) json_decode(stripslashes($data));
     }
 }
