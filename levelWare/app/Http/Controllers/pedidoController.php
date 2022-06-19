@@ -9,7 +9,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Nette\Utils\DateTime;
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\userController;
 
 class pedidoController extends Controller
 {
@@ -74,6 +74,9 @@ class pedidoController extends Controller
                 // Guardamos el nuevo precio total con todos los productos en el pedido
                 $newOrder->precioTotal = $precioTotal;
                 $newOrder->save();
+
+                // Añadimos los datos del usuario
+                userController::actDatosPedido($request->provincia, $request->ciudad, $request->direccion, $request->credit);
             } catch (QueryException $exception) {
                 return "ERROR al crear el pedido.";
             }

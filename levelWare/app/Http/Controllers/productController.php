@@ -61,7 +61,6 @@ class productController extends Controller
             $newPro->stock = $request->input('stock');
             $newPro->tipoPro = $request->input('tipoPro');
             $newPro->almacenamiento = $request->input('almacenamiento');
-            //$newPro->user_id = Auth::id();
 
             if (is_uploaded_file($request->file('foto'))) {
                 $nombreFoto = time() . "-" . $request->file('foto')->getClientOriginalName();

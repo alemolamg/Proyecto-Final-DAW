@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\QueryException;
 
 class userController extends Controller
 {
@@ -87,5 +89,22 @@ class userController extends Controller
     {
         $users = User::withTrashed()->get(); // SoftDeletes propertie.
         return view('user.listaUsers')->with('users', $users);
+    }
+
+    public function actDatosPedido($provincia, $ciudad, $direc, $tarjCredito)
+    {
+        try {
+            $usuario = User::findOrFail(Auth::user()->id); // Creamos un objeto Festival.
+
+            $usuario->provincia = $provincia;
+            $usuario->localidad = $ciudad;
+            $usuario->direccion = $direc;
+            $usuario->creditCard = $tarjCredito;
+            $usuario->save();    //Guardamos en la base de datos.
+
+        } catch (QueryException $exception) {
+            //echo $exception;
+            return redirect()->route('listaPro')->with('error', 1);
+        }
     }
 }
