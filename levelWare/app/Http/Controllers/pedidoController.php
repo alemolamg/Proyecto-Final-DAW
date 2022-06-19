@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\User;
 use App\Models\Product;
 use App\Models\productoCesta;
 use Illuminate\Database\QueryException;
@@ -76,7 +77,15 @@ class pedidoController extends Controller
                 $newOrder->save();
 
                 // Añadimos los datos del usuario
-                userController::actDatosPedido($request->provincia, $request->ciudad, $request->direccion, $request->credit);
+                //$userControler = userController::class;
+                //$userControler->actDatosPedido($request->provincia, $request->ciudad, $request->direccion, $request->credit);
+                $usuario = User::findOrFail(Auth::user()->id); // Creamos un objeto Festival.
+                $usuario->provincia = $request->provincia;
+                $usuario->localidad = $request->ciudad;
+                $usuario->direccion = $request->direccion;
+                $usuario->creditCard = $request->credit;
+                $usuario->save();    //Guardamos en la base de datos.
+
             } catch (QueryException $exception) {
                 return "ERROR al crear el pedido.";
             }
@@ -104,7 +113,7 @@ class pedidoController extends Controller
      */
     private function incrementoPrecio($idPro, $cant)
     {
-        $precioPro =  Product::findOrFail($idPro)->precio;
+        $precioPro = Product::findOrFail($idPro)->precio;
         return $precioPro * $cant;
     }
 
@@ -116,7 +125,9 @@ class pedidoController extends Controller
      */
     public function show($id)
     {
-        //
+        $ped = Order::findOrFail($id);
+        $productos = productoCesta::where('idPedido', $id)->get();
+        return view('pedido.show')->with('pedido', $ped)->with('productos', $productos);
     }
 
     /**

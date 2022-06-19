@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="979d4939-622c-4dc0-929a-9fe3f93ef77e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/diagramaER.vuerd.json" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/diagramaER.vuerd.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/app/Http/Controllers/clientService.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/app/Http/Controllers/clientService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/clientService/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/clientService/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/clientService/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/clientService/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/clientService/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/clientService/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/navigation-menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/app/Http/Controllers/pedidoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/app/Http/Controllers/pedidoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/components/order-list-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/components/order-list-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/components/product-card-big.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/components/product-card-big.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,22 +157,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Applications/MAMP/htdocs/Proyecto-Final-DAW/levelWare/storage/app/public/repairImgs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Applications/MAMP/htdocs/Proyecto-Final-DAW/levelWare/storage/app/public/repairImgs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/levelWare/storage/app/public/repairImgs" />
@@ -231,6 +227,8 @@
       <workItem from="1655048934960" duration="1405000" />
       <workItem from="1655131064581" duration="804000" />
       <workItem from="1655371469501" duration="2128000" />
+      <workItem from="1655669190410" duration="1000" />
+      <workItem from="1655678827644" duration="81000" />
     </task>
     <servers />
   </component>

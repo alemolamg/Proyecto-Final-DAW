@@ -4,6 +4,5 @@
         <h2 class="font-bold text-xl">ID pedido: {{ $pedido->id }}</h2>
         <p>Fecha pedido: {{ $pedido->fechaPedido }}</p>
         <p>Precio total: {{ $pedido->precioTotal }}</p>
-
     </div>
 </a>
