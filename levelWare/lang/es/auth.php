@@ -16,5 +16,6 @@ return [
     'failed' => 'Las credenciales son incorrectas.',
     'password' => 'La contraeña introducida no es correcta.',
     'throttle' => 'Demasiado tiempo de espera. Por favor intentalo de nuevo en :seconds segundos.',
-
+    'login'  => 'Iniciar Sesión',
+    'register' => 'Registrarse',
 ];

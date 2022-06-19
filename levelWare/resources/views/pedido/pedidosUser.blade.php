@@ -1,9 +1,3 @@
-<?php
-$arrayCesta = session()->get('CESTA');
-$precioTotal = 0;
-$user = Auth::user();
-?>
-
 <x-app-layout>
     <div class="mt-3 pt-1 ">
         <div class="w-auto lg:w-auto py-3 pl-2 md:pl-5 ">
@@ -15,7 +9,7 @@ $user = Auth::user();
         <div id="listaPedidos" class="md:px-4 px-2 py-1 flex flex-wrap justify-between">
             @if (!empty($pedidos))
                 @foreach ($pedidos as $ped)
-                    <x-orderListComponent :pedidos="$ped" :cantidad="$pro['cant']"></x-orderListComponent>
+                    <x-orderListComponent :pedidos="$ped"></x-orderListComponent>
                 @endforeach
             @else
                 <p>No has realizado ningún pedido</p>
