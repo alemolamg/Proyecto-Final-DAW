@@ -6,8 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center ">
                     <a href="{{ route('/') }}">
-                        <x-jet-application-mark class="block h-10 w-auto" />
-                        <!-- <img src="storage/setaLevelWare.png" class="w-12"> -->
+                        <img class="block h-10 md:h-11 lg:12 w-auto" src="{{ asset('storage/setaLevelWare.png') }}">
                     </a>
                 </div>
 
@@ -31,10 +30,10 @@
 
                 @auth()
                     <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                                                                                                                            <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
-                                                                                                                                                { __('messages.consumerService') }}
-                                                                                                                                            </x-jet-nav-link>
-                                                                                                                                        </div> -->
+                                                                                                                                                                                                                <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
+                                                                                                                                                                                                                    { __('messages.consumerService') }}
+                                                                                                                                                                                                                </x-jet-nav-link>
+                                                                                                                                                                                                            </div> -->
                 @endauth
 
                 <!-- Vista admin -->
@@ -209,7 +208,7 @@
                             <x-slot name="trigger">
                                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                     <button
-                                        class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                                        class="flex text-md border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
                                         <img class="h-8 w-8 rounded-full object-cover"
                                             src="{{ Auth::user()->profile_photo_url }}"
                                             alt="{{ Auth::user()->name }}" />
@@ -217,7 +216,7 @@
                                 @else
                                     <span class="inline-flex rounded-md">
                                         <button type="button"
-                                            class=" bg-green-700 inline-flex items-center px-3 py-3 border border-transparent text-sm leading-4 font-medium rounded-md focus:outline-none transition hover:bg-indigo-700 ">
+                                            class=" bg-green-700 inline-flex items-center px-3 py-3 border border-transparent text-md leading-4 font-medium rounded-md focus:outline-none transition hover:bg-indigo-700 ">
                                             {{ Auth::user()->name }}
 
                                             <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
