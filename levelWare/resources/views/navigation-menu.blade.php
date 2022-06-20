@@ -31,10 +31,10 @@
 
                 @auth()
                     <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                                                                                                <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
-                                                                                                                    { __('messages.consumerService') }}
-                                                                                                                </x-jet-nav-link>
-                                                                                                            </div> -->
+                                                                                                                                            <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
+                                                                                                                                                { __('messages.consumerService') }}
+                                                                                                                                            </x-jet-nav-link>
+                                                                                                                                        </div> -->
                 @endauth
 
                 <!-- Vista admin -->
@@ -204,7 +204,7 @@
                 </div>
                 <!-- Settings Dropdown -->
                 @auth()
-                    <div class="ml-3 relative">
+                    <div class="ml-3 relative btnLevelware">
                         <x-jet-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
@@ -217,7 +217,7 @@
                                 @else
                                     <span class="inline-flex rounded-md">
                                         <button type="button"
-                                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                                            class=" bg-green-700 inline-flex items-center px-3 py-3 border border-transparent text-sm leading-4 font-medium rounded-md focus:outline-none transition hover:bg-indigo-700 ">
                                             {{ Auth::user()->name }}
 
                                             <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
