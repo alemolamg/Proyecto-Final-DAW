@@ -125,9 +125,11 @@ class pedidoController extends Controller
      */
     public function show($id)
     {
+        //return "SE VE ALGO";
         $ped = Order::findOrFail($id);
-        $productos = productoCesta::where('idPedido', $id)->get();
-        return view('pedido.show')->with('pedido', $ped)->with('productos', $productos);
+        $proCesta = productoCesta::where('idPedido', $id)->get();
+        //return $arrayPro[0]->nombre;
+        return view('pedido.show')->with('pedido', $ped)->with('proCesta', $proCesta);
     }
 
     /**
@@ -187,7 +189,7 @@ class pedidoController extends Controller
 
     public function pedidosUser()
     {
-        $pedidos = Order::where('idUser', Auth::user()->id)->get();
+        $pedidos = Order::where('idUser', Auth::user()->id)->orderBy('created_at', 'desc')->get();
         return view('pedido.pedidosUser')->with('pedidos', $pedidos);
     }
 }

@@ -2,7 +2,33 @@
     href="{{ route('pedido.show', $pedido->id) }}">
     <div class="m-2 ">
         <h2 class="font-bold text-xl">ID pedido: {{ $pedido->id }}</h2>
+        <p class="font-bold">Estado:
+            @switch($pedido->estado)
+                @case(0)
+                    En preparación
+                @break
+
+                @case(1)
+                    Enviado
+                @break
+
+                @case(2)
+                    En reparto
+                @break
+
+                @case(3)
+                    Entregado
+                @break
+
+                @case(4)
+                    Finalizado
+                @break
+
+                @default
+                    Cancelado.
+            @endswitch
+        </p>
         <p>Fecha pedido: {{ $pedido->fechaPedido }}</p>
-        <p>Precio total: {{ $pedido->precioTotal }}</p>
+        <p>Precio total: {{ $pedido->precioTotal }}€</p>
     </div>
 </a>
