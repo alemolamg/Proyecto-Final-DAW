@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -921,
-    "scrollLeft": -534,
-    "zoomLevel": 1,
+    "scrollTop": -449,
+    "scrollLeft": 0,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -211,8 +211,8 @@
         "ui": {
           "active": false,
           "left": 714.4223,
-          "top": 441.0416,
-          "zIndex": 1,
+          "top": 541.0406,
+          "zIndex": 15,
           "widthName": 60,
           "widthComment": 120,
           "color": "#396406"
@@ -588,9 +588,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1453,
-          "top": 590.35,
-          "zIndex": 8,
+          "left": 1368.556,
+          "top": 591.4611,
+          "zIndex": 9,
           "widthName": 86.55078125,
           "widthComment": 120
         },
@@ -719,9 +719,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 116.3905,
-          "top": 795.6335,
-          "zIndex": 7,
+          "left": 161.9463,
+          "top": 845.633,
+          "zIndex": 14,
           "widthName": 60,
           "widthComment": 120
         },
@@ -827,9 +827,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 148.6,
-          "top": 469.25,
-          "zIndex": 2,
+          "left": 195.2667,
+          "top": 570.3601,
+          "zIndex": 16,
           "widthName": 93.06982421875,
           "widthComment": 120
         },
@@ -1004,9 +1004,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 294.5267,
-          "top": 1183.0844,
-          "zIndex": 5,
+          "left": 293.4156,
+          "top": 1114.1956,
+          "zIndex": 12,
           "widthName": 63.42626953125,
           "widthComment": 60
         },
@@ -1181,9 +1181,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1097.9513,
-          "top": 1227.9355,
-          "zIndex": 6,
+          "left": 1087.9514,
+          "top": 1105.7145,
+          "zIndex": 13,
           "widthName": 76.43896484375,
           "widthComment": 120
         },
@@ -1243,9 +1243,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1451.7784,
-          "top": 919.5561,
-          "zIndex": 4,
+          "left": 1335.1128,
+          "top": 959.5558,
+          "zIndex": 10,
           "widthName": 60,
           "widthComment": 111.12890625
         },
@@ -1270,7 +1270,7 @@
             "4a569ff0-154b-4fd3-be02-cd1eb494988f"
           ],
           "x": 1135.7553078125,
-          "y": 547.2916,
+          "y": 647.2906,
           "direction": "right"
         },
         "end": {
@@ -1278,8 +1278,8 @@
           "columnIds": [
             "5dda7b7b-f983-4873-a2e6-1a9ed7a61a63"
           ],
-          "x": 1453,
-          "y": 648.6,
+          "x": 1368.556,
+          "y": 649.7111,
           "direction": "left"
         },
         "constraintName": "fk_producto_to_productocesta",
@@ -1296,7 +1296,7 @@
             "4a569ff0-154b-4fd3-be02-cd1eb494988f"
           ],
           "x": 714.4223,
-          "y": 547.2916,
+          "y": 647.2906,
           "direction": "left"
         },
         "end": {
@@ -1304,8 +1304,8 @@
           "columnIds": [
             "dbf18a15-90c8-4df7-9a12-f9d17c990a7b"
           ],
-          "x": 499.03896484375,
-          "y": 544.75,
+          "x": 545.70566484375,
+          "y": 645.8601,
           "direction": "right"
         },
         "constraintName": "fk_producto_to_pruductopedido",
@@ -1321,8 +1321,8 @@
           "columnIds": [
             "3298141f-7631-43e9-94b3-1a0a7734ccf4"
           ],
-          "x": 323.91344921875,
-          "y": 795.6335,
+          "x": 369.46924921875,
+          "y": 845.633,
           "direction": "top"
         },
         "end": {
@@ -1330,8 +1330,8 @@
           "columnIds": [
             "f54ba310-db6f-4f31-90b2-4914c0658177"
           ],
-          "x": 323.819482421875,
-          "y": 620.25,
+          "x": 370.486182421875,
+          "y": 721.3601,
           "direction": "bottom"
         },
         "constraintName": "fk_pedido_to_pruductopedido",
@@ -1356,8 +1356,8 @@
           "columnIds": [
             "bf71d4be-cae2-4c20-9731-143f45eab1d7"
           ],
-          "x": 732.92562578125,
-          "y": 1236.2094,
+          "x": 731.81452578125,
+          "y": 1167.3206,
           "direction": "right"
         },
         "constraintName": "fk_cliente_to_reparacion",
@@ -1382,8 +1382,8 @@
           "columnIds": [
             "1bb0f7ba-e9b0-4d7c-80ce-d89baf142e6a"
           ],
-          "x": 1097.9513,
-          "y": 1281.0605,
+          "x": 1087.9514,
+          "y": 1158.8395,
           "direction": "left"
         },
         "constraintName": "fk_cliente_to_productorep",
@@ -1399,8 +1399,8 @@
           "columnIds": [
             "9de3f50b-80c6-4aac-9dad-ef5b6f819213"
           ],
-          "x": 1097.9513,
-          "y": 1387.3105,
+          "x": 1087.9514,
+          "y": 1265.0895,
           "direction": "left"
         },
         "end": {
@@ -1408,8 +1408,8 @@
           "columnIds": [
             "8dc2f900-a1df-4d79-9480-ec777b0c9366"
           ],
-          "x": 732.92562578125,
-          "y": 1342.4594,
+          "x": 731.81452578125,
+          "y": 1273.5706,
           "direction": "right"
         },
         "constraintName": "fk_productorep_to_reparacion",
@@ -1425,8 +1425,8 @@
           "columnIds": [
             "e8dcadcd-37f4-420b-b90b-9c5cd8c3df9f"
           ],
-          "x": 1451.7784,
-          "y": 974.5561,
+          "x": 1335.1128,
+          "y": 1014.5558,
           "direction": "left"
         },
         "end": {
@@ -1460,8 +1460,8 @@
           "columnIds": [
             "81f222eb-154b-4b76-a1e0-c31d4ea44d43"
           ],
-          "x": 1453,
-          "y": 765.1,
+          "x": 1368.556,
+          "y": 766.2111,
           "direction": "left"
         },
         "constraintName": "fk_usuario_to_productocesta",
@@ -1486,8 +1486,8 @@
           "columnIds": [
             "797be2d3-d64a-4585-aa0d-b9ca9d18fa58"
           ],
-          "x": 531.4363984375,
-          "y": 881.3835,
+          "x": 576.9921984375001,
+          "y": 931.383,
           "direction": "right"
         },
         "constraintName": "fk_usuario_to_pedido",
