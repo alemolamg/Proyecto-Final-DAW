@@ -13,3 +13,15 @@
     max-width: 620px;
     overflow: hidden;
 }
+
+.btnLevelware {
+    background-color: #17803d;
+    background: #17803d;
+    color: white
+}
+
+.btnLevelware:hover{
+    background-color: #5046e5;
+    background: #5046e5;
+    color: white;
+}
