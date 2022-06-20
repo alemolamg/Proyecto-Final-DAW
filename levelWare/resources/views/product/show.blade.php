@@ -42,10 +42,11 @@
                             @csrf
                             <input
                                 class="max-w-md w-60 px-3 py-2 mr-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                id="cant" type="number" placeholder="Cant. Entradas" name="cant" value="1" required />
+                                id="cant" type="number" placeholder="Cant. Entradas" name="cant" value="1"
+                                required />
                             <input type="hidden" value="{{ $pro->id }}" name="proId" id="proId">
                             <input type="submit" value="Comprar"
-                                class="bg-indigo-600 hover:bg-green-300 hover:text-black text-white font-bold py-2 px-4 rounded">
+                                class="bg-green-700 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
                         </form>
                     </div>
 

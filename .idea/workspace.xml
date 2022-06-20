@@ -7,8 +7,10 @@
     <list default="true" id="979d4939-622c-4dc0-929a-9fe3f93ef77e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/levelWare/app/Http/Controllers/pedidoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/app/Http/Controllers/pedidoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/components/order-list-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/components/order-list-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/app/View/Components/productCardBig.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/app/View/Components/productCardBig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/levelWare/resources/views/components/product-card-big.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/components/product-card-big.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/pedido/pedidosUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/pedido/pedidosUser.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levelWare/resources/views/pedido/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/levelWare/resources/views/pedido/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +230,8 @@
       <workItem from="1655131064581" duration="804000" />
       <workItem from="1655371469501" duration="2128000" />
       <workItem from="1655669190410" duration="1000" />
-      <workItem from="1655678827644" duration="81000" />
+      <workItem from="1655678827644" duration="338000" />
+      <workItem from="1655704812190" duration="668000" />
     </task>
     <servers />
   </component>
