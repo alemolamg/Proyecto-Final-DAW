@@ -29,7 +29,7 @@
 
 <body class="levelware">
     {{ $slot }}
-    <p class="text-yellow-500">CORREO ENVIADO CORRECTAMENTE</p>
+    <p class="text-yellow-500 uppercase">pedido creado correctamente </p>
 </body>
 
 </html>

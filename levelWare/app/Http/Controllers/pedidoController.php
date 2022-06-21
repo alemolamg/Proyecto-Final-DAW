@@ -10,7 +10,9 @@ use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Nette\Utils\DateTime;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\userController;
+use App\Mail\PedidoMailable;
 
 class pedidoController extends Controller
 {
@@ -93,8 +95,12 @@ class pedidoController extends Controller
             return "La cesta está vacía";
         }
 
+        $correo = new PedidoMailable;
+        Mail::to(Auth::user()->email)->send($correo);
+
         session()->forget('CESTA'); //Vaciamos la cesta
-        return "Hemos estado en el creado de la cesta. El precio total sería: " . $precioTotal;
+        session()->push('pedCorrect', 1);
+        return redirect()->route('/');
     }
 
     /**

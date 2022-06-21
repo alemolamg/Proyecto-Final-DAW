@@ -6,7 +6,7 @@
         </div>
 
 
-        <div id="listaPedidos" class="md:px-4 px-2 py-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 ">
+        <div id="listaPedidos" class="md:px-4 px-2 py-1 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ">
             @if (!empty($pedidos))
                 @foreach ($pedidos as $ped)
                     <x-order-list-component :pedido="$ped">

@@ -30,10 +30,10 @@
 
                 @auth()
                     <!--<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                                                                                                                                                                                                            <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
-                                                                                                                                                                                                                                { __('messages.consumerService') }}
-                                                                                                                                                                                                                            </x-jet-nav-link>
-                                                                                                                                                                                                                        </div> -->
+                                                                                                                                                                                                                                    <x-jet-nav-link href="{route('consola.index') }}" active="request()->routeIs('consola.index')">
+                                                                                                                                                                                                                                        { __('messages.consumerService') }}
+                                                                                                                                                                                                                                    </x-jet-nav-link>
+                                                                                                                                                                                                                                </div> -->
                 @endauth
 
                 <!-- Vista admin -->
@@ -75,9 +75,9 @@
                                             Admin. Pedidos
                                         </x-jet-dropdown-link>
 
-                                        <x-jet-dropdown-link href="#">
-                                            Admin. Reparaciones - ERROR
-                                        </x-jet-dropdown-link>
+                                        <!-- <x-jet-dropdown-link href="#">
+                                                Admin. Reparaciones - ERROR
+                                            </x-jet-dropdown-link> -->
                                     </x-slot>
                                 </x-jet-dropdown>
                             </div>
@@ -217,7 +217,8 @@
                                     <span class="inline-flex rounded-md">
                                         <button type="button"
                                             class=" bg-green-700 inline-flex items-center px-3 py-3 border border-transparent text-md leading-4 font-medium rounded-md focus:outline-none transition hover:bg-indigo-700 ">
-                                            <i class="mr-2 fa fa-user" aria-hidden="true"></i>{{ Auth::user()->name }}
+                                            <!-- <i class="mr-2 fa fa-user" aria-hidden="true"></i>-->
+                                            {{ Auth::user()->name }}
 
                                             <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20" fill="currentColor">

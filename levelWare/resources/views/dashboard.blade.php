@@ -34,6 +34,7 @@ $xbox = \App\Models\Product::where('nombre', 'LIKE', '%xbox%')
 ?>
 
 <x-app-layout>
+
     <x-productSearchComponent></x-productSearchComponent>
     <div class="max-w mx-auto sm:px-1 lg:px-0 px-1">
 
